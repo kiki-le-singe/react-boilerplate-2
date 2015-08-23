@@ -1,3 +1,4 @@
+import '../styles/scss/index.scss';
 import $ from 'jquery';
 import React from 'react';
 import Router from 'react-router';
