@@ -3,8 +3,5 @@ temp
 ./dist
 .sass-cache
 .tmp
-app/bower_components
-app/styles/css
-app/js/bundle.js
-app/js/bundle.js.map
+build
 reports
