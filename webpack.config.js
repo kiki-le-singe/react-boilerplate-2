@@ -1,5 +1,6 @@
 // LIST OF LOADERS: http://webpack.github.io/docs/list-of-loaders.html
 // WEBPACK DEV SERVER: http://webpack.github.io/docs/webpack-dev-server.html
+// webpack for browserify users: https://github.com/webpack/docs/wiki/webpack-for-browserify-users
 
 // TUTORIALS:
   // - http://christianalfoni.github.io/react-webpack-cookbook/index.html
