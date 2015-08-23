@@ -1,15 +1,15 @@
 {
-  "name": "react-boilerplate",
+  "name": "react-boilerplate-2",
   "version": "0.0.1",
   "author": {
     "name": "Kiki le singe"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kiki-le-singe/react-boilerplate.git"
+    "url": "https://github.com/kiki-le-singe/react-boilerplate-2.git"
   },
-  "homepage": "https://github.com/kiki-le-singe/react-boilerplate",
-  "bugs": "https://github.com/kiki-le-singe/react-boilerplate/issues",
+  "homepage": "https://github.com/kiki-le-singe/react-boilerplate-2",
+  "bugs": "https://github.com/kiki-le-singe/react-boilerplate-2/issues",
   "keywords": [
     "boilerplate",
     "react",
