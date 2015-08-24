@@ -1,17 +1,17 @@
 // LIST OF LOADERS: http://webpack.github.io/docs/list-of-loaders.html
 // WEBPACK DEV SERVER: http://webpack.github.io/docs/webpack-dev-server.html
 // webpack for browserify users: https://github.com/webpack/docs/wiki/webpack-for-browserify-users
+// webpack + font-awesome: https://gist.github.com/Turbo87/e8e941e68308d3b40ef6
 
 // TUTORIALS:
+  // - http://simonsmith.io/using-webpack-to-build-react-components-and-their-assets/
   // - http://christianalfoni.github.io/react-webpack-cookbook/index.html
+  // - http://christianalfoni.github.io/javascript/2014/12/13/did-you-know-webpack-and-react-is-awesome.html
   // - http://putaindecode.fr/posts/webpack/premier-exemple/
   // - http://jmfurlott.com/tutorial-setting-up-a-single-page-react-web-app-with-react-router-and-webpack/
   // - http://www.occitech.fr/blog/2015/03/webpack-react-es6/
-
-// TO SEE:
-  // - http://christianalfoni.github.io/javascript/2014/12/13/did-you-know-webpack-and-react-is-awesome.html
-  // - http://survivejs.com/webpack_react/webpack_and_react/
-  // - https://robots.thoughtbot.com/setting-up-webpack-for-react-and-hot-module-replacement
+  // - http://julienrenaux.fr/2015/03/30/introduction-to-webpack-with-practical-examples/
+  // - http://bensmithett.com/smarter-css-builds-with-webpack/
 
 /* eslint-disable */
 
