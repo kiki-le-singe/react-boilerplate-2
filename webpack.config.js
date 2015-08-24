@@ -70,12 +70,11 @@ module.exports = {
       {
         test: /\.html$/,
         loader: 'file?name=[name].[ext]',
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file?name=fonts/[name].[ext]'
       }
-      // ,
-      // {
-      //   test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-      //   loader: 'file?name=[path][name].[ext]&context=./src'
-      // }
     ]
   },
   plugins: [
