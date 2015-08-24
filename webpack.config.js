@@ -26,10 +26,9 @@ var pathToJQuery = path.resolve(nodeModulesDir, 'jquery/dist/jquery.min.js');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  context: __dirname + '/app',
   entry: {
-    javascript: ['webpack/hot/dev-server', './js/index.js'],
-    html: ['./index.html', './404.html']
+    javascript: ['webpack/hot/dev-server', './app/js/index.js'],
+    html: ['./app/index.html', './app/404.html']
   },
   // Optimizing rebundling: http://christianalfoni.github.io/react-webpack-cookbook/Optimizing-rebundling.html
   resolve: {
