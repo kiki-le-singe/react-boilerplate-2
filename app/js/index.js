@@ -1,10 +1,13 @@
-import '../styles/scss/index.scss';
 import $ from 'jquery';
 import React from 'react';
 import Router from 'react-router';
 import AppRoutes from './app-routes';
 // @mui: needs withs material-ui - important
 import injectTapEventPlugin from 'react-tap-event-plugin';
+
+// import '../styles/scss/index.scss';
+import 'node.normalize.scss/_normalize.scss'
+import 'font-awesome/scss/font-awesome.scss';
 
 $(() => {
   // @mui: needs withs material-ui - important
