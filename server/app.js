@@ -22,7 +22,6 @@ var applicationRoot = __dirname,
 app.use(bodyParser.urlencoded({extended: true}));
 // where to serve static content
 app.use(express.static(path.join(applicationRoot, '../app')));
-app.use(express.static(path.join(applicationRoot, '../node_modules/font-awesome')));
 
 /*******************
  ROUTES FOR OUR API
