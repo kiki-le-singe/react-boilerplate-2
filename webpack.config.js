@@ -28,20 +28,19 @@ module.exports = {
     javascript: ['webpack/hot/dev-server', './app/js/index.js'],
     html: ['./app/index.html', './app/404.html']
   },
-  // Optimizing rebundling: http://christianalfoni.github.io/react-webpack-cookbook/Optimizing-rebundling.html
   resolve: {
+    // Optimizing rebundling: http://christianalfoni.github.io/react-webpack-cookbook/Optimizing-rebundling.html
     alias: {
       'jquery': pathToJQuery
-    }
+    },
+    // Resolve the `./app` directory so we can avoid writing
+    // ../../styles/base.css but styles/base.css
+    modulesDirectories: ['node_modules', './app']
   },
   output: {
     path: __dirname + '/build',
-    filename: 'bundle.js'
-  },
-  // Resolve the `./app` directory so we can avoid writing
-  // ../../styles/base.css but styles/base.css
-  resolve: {
-    modulesDirectories: ['node_modules', './app']
+    filename: 'bundle.js',
+    publicPath: 'http://localhost:9090/build/'
   },
   module: {
     // Optimizing rebundling: http://christianalfoni.github.io/react-webpack-cookbook/Optimizing-rebundling.html
