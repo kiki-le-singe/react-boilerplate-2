@@ -20,8 +20,6 @@ var nodeModulesDir = path.resolve(__dirname, 'node_modules');
 var pathToFontAwesome = path.resolve(nodeModulesDir, 'font-awesome');
 var pathToReact = path.resolve(nodeModulesDir, 'react/dist/react.min.js');
 var pathToJQuery = path.resolve(nodeModulesDir, 'jquery/dist/jquery.min.js');
-// https://www.npmjs.com/package/html-webpack-plugin
-// var HtmlWebpackPlugin = require('html-webpack-plugin');
 // https://github.com/webpack/extract-text-webpack-plugin
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -79,8 +77,5 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('styles.css')
-    // new HtmlWebpackPlugin({
-    //   title: 'React Boilerplate'
-    // })
   ]
 };
