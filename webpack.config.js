@@ -39,8 +39,7 @@ module.exports = {
   },
   output: {
     path: __dirname + '/build',
-    filename: 'bundle.js',
-    publicPath: 'http://localhost:9090/build/'
+    filename: 'bundle.js'
   },
   module: {
     // Optimizing rebundling: http://christianalfoni.github.io/react-webpack-cookbook/Optimizing-rebundling.html
