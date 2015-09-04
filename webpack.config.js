@@ -17,7 +17,8 @@
 
 var path = require('path');
 var nodeModulesDir = path.resolve(__dirname, 'node_modules');
-var pathToFontAwesome = path.resolve(nodeModulesDir, 'font-awesome');
+var FontAwesomeSCSSDir = path.resolve(nodeModulesDir, 'font-awesome/scss');
+var NormalizeDir = path.resolve(nodeModulesDir, 'node.normalize.scss');
 var pathToReact = path.resolve(nodeModulesDir, 'react/dist/react.min.js');
 var pathToJQuery = path.resolve(nodeModulesDir, 'jquery/dist/jquery.min.js');
 // https://github.com/webpack/extract-text-webpack-plugin
@@ -36,6 +37,9 @@ module.exports = {
     // Resolve the `./app` directory so we can avoid writing
     // ../../styles/base.css but styles/base.css
     modulesDirectories: ['node_modules', './app']
+    // https://github.com/webpack/docs/wiki/configuration#resolveroot
+    // See: http://stackoverflow.com/questions/27502608/resolving-require-paths-with-webpack
+    root: [FontAwesomeSCSSDir, NormalizeDir],
   },
   output: {
     path: __dirname + '/build',
