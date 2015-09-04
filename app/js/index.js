@@ -6,8 +6,8 @@ import AppRoutes from './app-routes';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 // import '../styles/scss/index.scss';
-import 'node.normalize.scss/_normalize.scss'
-import 'font-awesome/scss/font-awesome.scss';
+import '_normalize.scss'
+import 'font-awesome.scss';
 
 $(() => {
   // @mui: needs withs material-ui - important
