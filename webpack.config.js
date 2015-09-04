@@ -21,6 +21,7 @@ var FontAwesomeSCSSDir = path.resolve(nodeModulesDir, 'font-awesome/scss');
 var NormalizeDir = path.resolve(nodeModulesDir, 'node.normalize.scss');
 var pathToReact = path.resolve(nodeModulesDir, 'react/dist/react.min.js');
 var pathToJQuery = path.resolve(nodeModulesDir, 'jquery/dist/jquery.min.js');
+var pathToFontAwesome = path.resolve(nodeModulesDir, 'font-awesome/css/font-awesome.min.css');
 // https://github.com/webpack/extract-text-webpack-plugin
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -32,7 +33,8 @@ module.exports = {
   resolve: {
     // Optimizing rebundling: http://christianalfoni.github.io/react-webpack-cookbook/Optimizing-rebundling.html
     alias: {
-      'jquery': pathToJQuery
+      'jquery': pathToJQuery,
+      'font-awesome.scss': pathToFontAwesome
     },
     // Resolve the `./app` directory so we can avoid writing
     // ../../styles/base.css but styles/base.css
@@ -47,7 +49,7 @@ module.exports = {
   },
   module: {
     // Optimizing rebundling: http://christianalfoni.github.io/react-webpack-cookbook/Optimizing-rebundling.html
-    noParse: [pathToJQuery],
+    noParse: [pathToJQuery, pathToFontAwesome],
     loaders: [
       {
         test: /\.js$/,
