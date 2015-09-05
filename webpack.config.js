@@ -95,6 +95,9 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('styles.css'),
 
+    // https://github.com/webpack/docs/wiki/list-of-plugins#noerrorsplugin
+    new webpack.NoErrorsPlugin(),
+
     // switch the server to hot mode
     new webpack.HotModuleReplacementPlugin(),
 
