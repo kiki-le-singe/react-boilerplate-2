@@ -27,8 +27,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
-    javascript: ['webpack/hot/dev-server', './app/js/index.js'],
-    html: ['./app/index.html', './app/404.html']
+    javascript: ['webpack/hot/dev-server', './app/js/index.js']
   },
   resolve: {
     // Optimizing rebundling: http://christianalfoni.github.io/react-webpack-cookbook/Optimizing-rebundling.html
@@ -70,10 +69,6 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('style', 'css!sass')
-      },
-      {
-        test: /\.html$/,
-        loader: 'file?name=[name].[ext]',
       },
       {
         test: /\.(woff|woff2|eot|ttf|svg)(\?v=\d+\.\d+\.\d+)?$/,
