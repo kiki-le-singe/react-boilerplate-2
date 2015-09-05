@@ -4,6 +4,9 @@
 // webpack + font-awesome: https://gist.github.com/Turbo87/e8e941e68308d3b40ef6
 
 // TUTORIALS:
+  // - webpack-dev-server and a node server
+    // - http://ctheu.com/2015/05/14/using-react-hot-loader-with-a-webpack-dev-server-and-a-node-server/
+    // - http://www.christianalfoni.com/articles/2015_04_19_The-ultimate-webpack-setup
   // - http://simonsmith.io/using-webpack-to-build-react-components-and-their-assets/
   // - http://christianalfoni.github.io/react-webpack-cookbook/index.html
   // - http://christianalfoni.github.io/javascript/2014/12/13/did-you-know-webpack-and-react-is-awesome.html
