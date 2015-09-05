@@ -18,16 +18,19 @@
 
 /* eslint-disable */
 
+// PACKAGES
 var webpack = require('webpack');
 var path = require('path');
+// https://github.com/webpack/extract-text-webpack-plugin
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+// PATHS/DIRECTORIES
 var nodeModulesDir = path.resolve(__dirname, 'node_modules');
 var FontAwesomeSCSSDir = path.resolve(nodeModulesDir, 'font-awesome/scss');
 var NormalizeDir = path.resolve(nodeModulesDir, 'node.normalize.scss');
 var pathToReact = path.resolve(nodeModulesDir, 'react/dist/react.min.js');
 var pathToJQuery = path.resolve(nodeModulesDir, 'jquery/dist/jquery.min.js');
 var pathToFontAwesome = path.resolve(nodeModulesDir, 'font-awesome/css/font-awesome.min.css');
-// https://github.com/webpack/extract-text-webpack-plugin
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
