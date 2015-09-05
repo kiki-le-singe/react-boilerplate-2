@@ -15,6 +15,7 @@
 
 /* eslint-disable */
 
+var webpack = require('webpack');
 var path = require('path');
 var nodeModulesDir = path.resolve(__dirname, 'node_modules');
 var FontAwesomeSCSSDir = path.resolve(nodeModulesDir, 'font-awesome/scss');
@@ -77,6 +78,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('styles.css')
+    new ExtractTextPlugin('styles.css'),
+
+    // see: http://christianalfoni.github.io/javascript/2014/12/13/did-you-know-webpack-and-react-is-awesome.html#chunks
+    new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.bundle.js')
   ]
 };
