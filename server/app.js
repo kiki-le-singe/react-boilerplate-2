@@ -12,11 +12,17 @@ var applicationRoot = __dirname,
     path = require('path'), // Utilities for dealing with file paths
     mongoose = require('mongoose'), // MongoDB integration
     bodyParser = require('body-parser'),
-    port = process.env.PORT || 9000, // set our port
+    nodeServerPort = process.env.PORT || 9000, // set our nodeServerPort
+    webpackDevServerPort = 8080, // set our webpackDevServerPort
     args = process.argv,
     stubArg = ('true' === args[2]),
     api = require('./api/api')
     uniqid = require('uniqid');
+
+// We start a webpack-dev-server with our config
+var webpack = require('webpack');
+var WebpackDevServer = require('webpack-dev-server');
+var config = require('../webpack.config.js');
 
 // parses request body and populates request.body
 app.use(bodyParser.urlencoded({extended: true}));
@@ -77,6 +83,23 @@ app.use('/api', router);
  START THE SERVER
 ******************/
 
-app.listen(port, function () {
-  console.log('Express server listening on port %d in %s node', port, app.settings.env);
+app.listen(nodeServerPort, function () {
+  console.log('Express server listening on nodeServerPort %d in %s node', nodeServerPort, app.settings.env);
+});
+
+// http://webpack.github.io/docs/webpack-dev-server.html
+new WebpackDevServer(webpack(config), {
+  stats: { colors: true },
+  hot: true,
+  inline: true,
+  historyApiFallback: true,
+  proxy: {
+    '*': 'http://localhost:' + nodeServerPort
+  }
+}).listen(webpackDevServerPort, 'localhost', function (err, result) {
+  if (err) {
+    console.log(err);
+  }
+
+  console.log('Listening at localhost:' + webpackDevServerPort);
 });

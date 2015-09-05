@@ -78,8 +78,7 @@
     "webpack-dev-server": "^1.10.1"
   },
   "scripts": {
-    "start": "npm run build | npm run dev",
-    "build": "webpack --progress --colors",
-    "dev": "webpack-dev-server --devtool eval-source-map --progress --colors --hot --inline --content-base build"
+    "start": "npm run build | node server/app.js",
+    "build": "webpack --progress"
   }
 }

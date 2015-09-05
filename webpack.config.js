@@ -34,7 +34,11 @@ var pathToFontAwesome = path.resolve(nodeModulesDir, 'font-awesome/css/font-awes
 
 module.exports = {
   entry: {
-    javascript: ['webpack/hot/dev-server', './app/js/index.js']
+    javascript: [
+      'webpack-dev-server/client?http://localhost:8080',
+      'webpack/hot/dev-server',
+      './app/js/index.js'
+    ]
   },
   resolve: {
     // Optimizing rebundling: http://christianalfoni.github.io/react-webpack-cookbook/Optimizing-rebundling.html
@@ -88,6 +92,9 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('styles.css'),
+
+    // switch the server to hot mode
+    new webpack.HotModuleReplacementPlugin(),
 
     // see: http://christianalfoni.github.io/javascript/2014/12/13/did-you-know-webpack-and-react-is-awesome.html#chunks
     new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.bundle.js')
