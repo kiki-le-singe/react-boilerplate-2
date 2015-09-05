@@ -4,6 +4,7 @@ temp
 dist
 .sass-cache
 build/*
+!build/favicon.ico
 !build/index.html
 !build/404.html
 reports
