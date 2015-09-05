@@ -58,6 +58,9 @@ module.exports = {
   module: {
     // Optimizing rebundling: http://christianalfoni.github.io/react-webpack-cookbook/Optimizing-rebundling.html
     noParse: [pathToJQuery, pathToFontAwesome],
+
+    // http://webpack.github.io/docs/loaders.html
+    // http://webpack.github.io/docs/list-of-loaders.html
     loaders: [
       {
         test: /\.js$/,
