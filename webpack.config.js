@@ -55,7 +55,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loaders: ['react-hot', 'babel?optional[]=runtime&stage=0'],
+        loaders: ['react-hot', 'babel?optional[]=runtime&stage=0', 'eslint'],
         exclude: /node_modules/
       },
       {
