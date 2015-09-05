@@ -33,6 +33,8 @@ var pathToJQuery = path.resolve(nodeModulesDir, 'jquery/dist/jquery.min.js');
 var pathToFontAwesome = path.resolve(nodeModulesDir, 'font-awesome/css/font-awesome.min.css');
 
 module.exports = {
+  // http://webpack.github.io/docs/configuration.html#devtool
+  devtool: 'eval-source-map',
   entry: {
     javascript: [
       'webpack-dev-server/client?http://localhost:8080',
