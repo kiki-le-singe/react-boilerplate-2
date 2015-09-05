@@ -1,7 +1,9 @@
 node_modules
 temp
 .tmp
-build
 dist
 .sass-cache
+build/*
+!build/index.html
+!build/404.html
 reports
