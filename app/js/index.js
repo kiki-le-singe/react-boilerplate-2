@@ -20,4 +20,8 @@ $(() => {
     // React.render(<Handler/>, document.body);
     React.render(<Handler />, document.getElementById('app'));
   });
+
+  let myApp = new Framework7({
+    swipePanel: 'left' // http://www.idangero.us/framework7/docs/side-panels.html#open-panels-with-swipe
+  });
 });
