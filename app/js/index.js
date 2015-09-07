@@ -3,7 +3,7 @@ import React from 'react';
 import Router from 'react-router';
 import AppRoutes from './app-routes';
 
-import 'font-awesome.scss';
+// import 'font-awesome.scss';
 import 'styles/scss/index.scss';
 
 $(() => {
