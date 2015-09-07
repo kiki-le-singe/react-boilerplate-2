@@ -12,7 +12,6 @@ import Home from './components/pages/home/home';
 import About from './components/pages/about/about';
 import Hello from './components/pages/hello/hello';
 import ToolBoxWrapper from './components/tools/toolBoxWrapper';
-import MyReactCanvas from './components/poc/my-react-canvas';
 
 const AppRoutes = (
   <Route name="app" path="/" handler={App}>
@@ -20,7 +19,6 @@ const AppRoutes = (
     <Route name="hello" path="hello" handler={Hello} />
     <Route name="about" path="about" handler={About} />
     <Route name="tools" path="tools" handler={ToolBoxWrapper} />
-    <Route name="my-react-canvas" path="my-react-canvas" handler={MyReactCanvas} />
     <NotFoundRoute handler={About} />
   </Route>
 );
