@@ -1,53 +1,55 @@
-a {
-  @include transition(color 0.3s ease-out);
+// a {
+//   @include transition(color 0.3s ease-out);
+//
+//   color: $materialBlue;
+//   display: inline-block;
+//   text-decoration: none;
+//
+//   i.fa {
+//     @include transition(font-size 0.3s ease-out);
+//
+//     margin-right: 10px;
+//   }
+//
+//   @include media($desktop) {
+//     @include link-device-behavior();
+//   }
+//
+//   @include media($phone-portrait) {
+//     @include link-device-behavior(false);
+//   }
+//
+//   @include media($tablet-landscape) {
+//     @include link-device-behavior(false);
+//   }
+// }
+//
+// button.action {
+//   $radius: 50%;
+//
+//   @include border-top-radius($radius);
+//   @include border-bottom-radius($radius);
+//   @include transition(height 0.3s ease-out, width 0.3s ease-out);
+//
+//   border-style: none;
+//   height: 44px;
+//   width: 44px;
+//
+//   i.fa {
+//     @include transition(font-size 0.2s ease-out);
+//   }
+//
+//   @include media($desktop) {
+//     @include button-device-behavior();
+//   }
+//
+//   @include media($phone-portrait) {
+//     @include button-device-behavior(false);
+//   }
+//
+//   @include media($tablet-landscape) {
+//     @include button-device-behavior(false);
+//   }
+// }
 
-  color: $materialBlue;
-  display: inline-block;
-  text-decoration: none;
-
-  i.fa {
-    @include transition(font-size 0.3s ease-out);
-
-    margin-right: 10px;
-  }
-
-  @include media($desktop) {
-    @include link-device-behavior();
-  }
-
-  @include media($phone-portrait) {
-    @include link-device-behavior(false);
-  }
-
-  @include media($tablet-landscape) {
-    @include link-device-behavior(false);
-  }
-}
-
-button.action {
-  $radius: 50%;
-
-  @include border-top-radius($radius);
-  @include border-bottom-radius($radius);
-  @include transition(height 0.3s ease-out, width 0.3s ease-out);
-
-  border-style: none;
-  height: 44px;
-  width: 44px;
-
-  i.fa {
-    @include transition(font-size 0.2s ease-out);
-  }
-
-  @include media($desktop) {
-    @include button-device-behavior();
-  }
-
-  @include media($phone-portrait) {
-    @include button-device-behavior(false);
-  }
-
-  @include media($tablet-landscape) {
-    @include button-device-behavior(false);
-  }
 }
