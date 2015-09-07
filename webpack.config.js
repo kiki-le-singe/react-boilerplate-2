@@ -87,6 +87,10 @@ module.exports = {
         loader: ExtractTextPlugin.extract('style', 'css!sass')
       },
       {
+        test: /\.(png|jpe?g)$/,
+        loader: 'file?name=img/[name].[ext]'
+      },
+      {
         test: /\.(woff|woff2|eot|ttf|svg)(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'file?name=fonts/[name].[ext]'
       }
