@@ -1,5 +1,8 @@
 import React from 'react';
 
+// Docs:
+// - http://www.idangero.us/framework7/docs/navbar.html
+
 class TopNavBar extends React.Component {
   render() {
     return (
