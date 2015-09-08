@@ -1,6 +1,6 @@
 import React from 'react';
 import {RouteHandler} from 'react-router';
-import TopNavBar from './top_nav_bar/top-nav-bar';
+
 import LeftSidePanel from './left_side_panel/left-side-panel';
 import RightSidePanel from './right_side_panel/right-side-panel';
 
@@ -10,21 +10,20 @@ class App extends Component {
   render() {
     return (
       <div className="app-wrapper">
-        <TopNavBar />
+
+        {/* Status bar overlay for full screen mode (PhoneGap) */}
+        <div className="statusbar-overlay"></div>
 
         {/* First, we need to add Panel's overlay that will overlays app while panel is opened */}
         <div className="panel-overlay"></div>
-
         <LeftSidePanel />
         <RightSidePanel />
 
-        <div className="page-content">
-          <div className="content-block">
-            {/* If no data-panel attribute, Left panel will be opened by default */}
-            <p><a href="#" className="open-panel">Open Left Panel</a></p>
-            {/* Click on link with "open-panel" and data-panel="right" attribute will open Right panel */}
-            <p><a href="#" data-panel="right" className="open-panel">Open Right Panel</a></p>
-            <RouteHandler />
+        <div className="views">
+          <div className="view view-main">
+            <div className="pages navbar-fixed">
+              <RouteHandler />
+            </div>
           </div>
         </div>
       </div>
