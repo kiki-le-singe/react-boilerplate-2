@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Nav from '../nav/nav';
+
 // Docs:
 // - http://www.idangero.us/framework7/docs/side-panels.html
 
@@ -7,6 +9,8 @@ class RightSidePanel extends React.Component {
   render() {
     return (
       <div className="panel panel-right panel-cover">
+        <Nav />
+
         <div className="content-block">
           <p>Right Panel content here</p>
           {/* Click on link with "close-panel" className will close panel */}
