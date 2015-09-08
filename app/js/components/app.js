@@ -1,8 +1,8 @@
 import React from 'react';
 import {RouteHandler} from 'react-router';
-import TopNavBar from './top-nav-bar/top-nav-bar';
-import LeftSidePanel from './left-side-panel/left-side-panel';
-import RightSidePanel from './right-side-panel/right-side-panel';
+import TopNavBar from './top_nav_bar/top-nav-bar';
+import LeftSidePanel from './left_side_panel/left-side-panel';
+import RightSidePanel from './right_side_panel/right-side-panel';
 
 const {PropTypes, Component} = React;
 
