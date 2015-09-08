@@ -11,7 +11,7 @@ class TopNavBar extends React.Component {
               <i className="icon icon-bars"></i>
             </a>
           </div>
-          <div className="center">React Boilerplate 2</div>
+          <div className="left">React Boilerplate 2</div>
         </div>
       </div>
     );
