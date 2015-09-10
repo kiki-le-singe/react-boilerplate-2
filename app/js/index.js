@@ -2,7 +2,6 @@ import $ from 'jquery';
 import React from 'react';
 import Router from 'react-router';
 import AppRoutes from './app-routes';
-import 'framework7';
 
 // *** STYLES *** //
 // Path to Framework7 MATERIAL CSS theme styles
@@ -19,9 +18,5 @@ $(() => {
   // Router.run(routes, Router.HistoryLocation, (Handler) => { // HTML5 History
     // React.render(<Handler/>, document.body);
     React.render(<Handler />, document.getElementById('app'));
-  });
-
-  let myApp = new Framework7({
-    swipePanel: 'left' // http://www.idangero.us/framework7/docs/side-panels.html#open-panels-with-swipe
   });
 });

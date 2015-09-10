@@ -1,5 +1,6 @@
 import React from 'react';
 import {RouteHandler} from 'react-router';
+import 'framework7';
 
 import LeftSidePanel from './left_side_panel/left-side-panel';
 import RightSidePanel from './right_side_panel/right-side-panel';
@@ -7,6 +8,17 @@ import RightSidePanel from './right_side_panel/right-side-panel';
 const {PropTypes, Component} = React;
 
 class App extends Component {
+
+  componentDidMount() {
+    this.myAppFramework7 = new Framework7({
+      swipePanel: 'left' // http://www.idangero.us/framework7/docs/side-panels.html#open-panels-with-swipe
+    });
+  }
+
+  componentWillUnmount() {
+    this.myAppFramework7 = null;
+  }
+
   render() {
     return (
       <div className="app-wrapper">
