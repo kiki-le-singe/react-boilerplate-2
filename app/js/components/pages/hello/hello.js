@@ -1,6 +1,6 @@
 import React from 'react';
 
-import TopNavBar from '../../top_nav_bar/top-nav-bar';
+import TopNavBar from 'components/top_nav_bar/top-nav-bar';
 
 class Hello extends React.Component {
   render() {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ListItem from '../list_item/list-item';
+import ListItem from 'components/list_item/list-item';
 
 // Docs:
 // - http://www.idangero.us/framework7/docs/list-view.html
