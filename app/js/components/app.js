@@ -19,6 +19,15 @@ class App extends Component {
     this.myAppFramework7 = null;
   }
 
+  // Understand using React Context:
+  // - https://facebook.github.io/react/blog/2014/03/28/the-road-to-1.0.html#context
+  // - https://www.tildedave.com/2014/11/15/introduction-to-contexts-in-react-js.html
+  getChildContext() {
+    return {
+      myAppFramework7: this.myAppFramework7
+    };
+  }
+
   render() {
     return (
       <div className="app-wrapper">
@@ -42,5 +51,9 @@ class App extends Component {
     );
   }
 }
+
+App.childContextTypes = {
+  myAppFramework7: PropTypes.instanceOf(Framework7)
+};
 
 export default App;
