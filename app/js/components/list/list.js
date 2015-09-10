@@ -1,23 +1,35 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 
 import ListItem from 'components/list_item/list-item';
 
 // Docs:
 // - http://www.idangero.us/framework7/docs/list-view.html
 
-class List extends React.Component {
+class List extends Component {
+
+  getMenuItems() {
+    const { menuItems } = this.props;
+
+    return menuItems.map((item, index) => {
+      return (
+        <ListItem route={item.route} text={item.text} key={index} />
+      );
+    });
+  }
+
   render() {
     return (
       <div className="list-block">
         <ul>
-          <ListItem />
-          <ListItem />
-          <ListItem />
-          <ListItem />
+          {this.getMenuItems()}
         </ul>
       </div>
     );
   }
 }
+
+List.propTypes = {
+  menuItems: PropTypes.array.isRequired
+};
 
 export default List;
