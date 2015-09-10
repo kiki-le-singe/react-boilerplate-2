@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 
 // Docs:
 // - http://www.idangero.us/framework7/docs/list-view.html#list-item-element
 
-class ListItem extends React.Component {
+class ListItem extends Component {
   render() {
     return (
       <li>
@@ -18,5 +18,10 @@ class ListItem extends React.Component {
     );
   }
 }
+
+ListItem.propTypes = {
+  route: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired
+};
 
 export default ListItem;
