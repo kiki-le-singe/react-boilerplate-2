@@ -1,11 +1,9 @@
-import React from 'react';
+import React, {PropTypes, Component} from 'react';
 import {RouteHandler} from 'react-router';
 import 'framework7';
 
 import LeftSidePanel from './left_side_panel/left-side-panel';
 import RightSidePanel from './right_side_panel/right-side-panel';
-
-const {PropTypes, Component} = React;
 
 class App extends Component {
 
