@@ -53,7 +53,7 @@ module.exports = {
 
     // Resolve the `./app` directory so we can avoid writing
     // ../../styles/base.css but styles/base.css
-    modulesDirectories: ['node_modules', './app'],
+    modulesDirectories: ['node_modules', './app', './app/js'],
 
     // https://github.com/webpack/docs/wiki/configuration#resolveroot
     // See: http://stackoverflow.com/questions/27502608/resolving-require-paths-with-webpack
