@@ -6,12 +6,14 @@ import { Link } from 'react-router';
 
 class ListItem extends Component {
   render() {
+    const { route, text } = this.props;
+
     return (
       <li>
         <Link to={route} className="item-link item-content">
           <div className="item-media"><i className="icon icon-f7"></i></div>
           <div className="item-inner">
-            <div className="item-title">Item title</div>
+            <div className="item-title">{text}</div>
           </div>
         </Link>
       </li>
