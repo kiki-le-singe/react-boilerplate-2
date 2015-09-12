@@ -1,5 +1,6 @@
 import React, {PropTypes, Component} from 'react';
 import {RouteHandler} from 'react-router';
+// The both Framework7 and Dom7 are exposed in window.*
 import 'framework7';
 
 import LeftSidePanel from './left_side_panel/left-side-panel';
