@@ -59,6 +59,7 @@
             "/^get.+$/",
             "/^handle.+$/",
             "/^render.+$/",
+            "/^show.+$/",
             "render"
           ]
         }]
