@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Page from 'components/Pages/Page';
-import ListSwipeout from 'components/List/ListSwipeout';
+import Page from 'components/pages/Page';
+import ListSwipeout from 'components/lists/ListSwipeout';
 
 class Tools extends Page {
 

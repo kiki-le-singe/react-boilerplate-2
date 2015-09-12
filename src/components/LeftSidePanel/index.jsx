@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Nav from 'components/Nav/Nav';
+import Nav from 'components/Nav';
 
 // Docs:
 // - http://www.idangero.us/framework7/docs/side-panels.html

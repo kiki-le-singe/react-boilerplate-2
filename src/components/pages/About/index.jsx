@@ -1,17 +1,17 @@
 import React from 'react';
 
-import Page from 'components/Pages/Page';
+import Page from 'components/pages/Page';
 
-class Hello extends Page {
+class About extends Page {
 
   getDataPage() {
-    return 'hello-world';
+    return 'about';
   }
 
   renderPage() {
     return (
       <div className="page-content">
-        <div className="content-block-title">Hello World</div>
+        <div className="content-block-title">About</div>
         <div className="content-block">
           {/* If no data-panel attribute, Left panel will be opened by default */}
           <p><a href="#" className="open-panel">Open Left Panel</a></p>
@@ -23,4 +23,4 @@ class Hello extends Page {
   }
 }
 
-export default Hello;
+export default About;

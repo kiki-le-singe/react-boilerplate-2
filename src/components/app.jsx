@@ -3,8 +3,8 @@ import { RouteHandler } from 'react-router';
 // The both Framework7 and Dom7 are exposed in window.*
 import 'framework7';
 
-import LeftSidePanel from './LeftSidePanel/LeftSidePanel';
-import RightSidePanel from './RightSidePanel/RightSidePanel';
+import LeftSidePanel from './LeftSidePanel';
+import RightSidePanel from './RightSidePanel';
 
 class App extends Component {
 
