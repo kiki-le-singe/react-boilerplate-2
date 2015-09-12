@@ -41,7 +41,7 @@ module.exports = {
     javascript: [
       'webpack-dev-server/client?http://localhost:8080',
       'webpack/hot/dev-server',
-      './app/js/index.js'
+      './src/index.jsx'
     ]
   },
   resolve: {
@@ -51,9 +51,9 @@ module.exports = {
       'font-awesome.scss': pathToFontAwesome
     },
 
-    // Resolve the `./app` directory so we can avoid writing
+    // Resolve the `./src` directory so we can avoid writing
     // ../../styles/base.css but styles/base.css
-    modulesDirectories: ['node_modules', './app', './app/js'],
+    modulesDirectories: ['node_modules', './src'],
 
     // https://github.com/webpack/docs/wiki/configuration#resolveroot
     // See: http://stackoverflow.com/questions/27502608/resolving-require-paths-with-webpack
