@@ -11,14 +11,14 @@ import App from './components/app';
 import Home from './components/pages/home/home';
 import About from './components/pages/about/about';
 import Hello from './components/pages/hello/hello';
-import ToolBoxWrapper from './components/tools/toolBoxWrapper';
+import Tools from './components/pages/tools/tools';
 
 const AppRoutes = (
   <Route name="app" path="/" handler={App}>
     <DefaultRoute name="home" handler={Home} />
     <Route name="hello" path="hello" handler={Hello} />
     <Route name="about" path="about" handler={About} />
-    <Route name="tools" path="tools" handler={ToolBoxWrapper} />
+    <Route name="tools" path="tools" handler={Tools} />
     <NotFoundRoute handler={About} />
   </Route>
 );
