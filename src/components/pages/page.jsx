@@ -8,8 +8,8 @@ class Page extends React.Component {
   // Use React with Other Libraries:
   // - https://facebook.github.io/react/tips/use-react-with-other-libraries.html
   componentDidMount() {
-    if (this.context.myAppFramework7) {
-      this.context.myAppFramework7.closePanel();
+    if (this.context.f7App) {
+      this.context.f7App.closePanel();
     }
   }
 
@@ -24,7 +24,7 @@ class Page extends React.Component {
 }
 
 Page.contextTypes = {
-  myAppFramework7: PropTypes.instanceOf(Framework7)
+  f7App: PropTypes.instanceOf(Framework7)
 };
 
 export default Page;

@@ -9,13 +9,13 @@ import RightSidePanel from './right_side_panel/right-side-panel';
 class App extends Component {
 
   componentDidMount() {
-    this.myAppFramework7 = new Framework7({
+    this.f7App = new Framework7({
       swipePanel: 'left' // http://www.idangero.us/framework7/docs/side-panels.html#open-panels-with-swipe
     });
   }
 
   componentWillUnmount() {
-    this.myAppFramework7 = null;
+    this.f7App = null;
   }
 
   // Understand using React Context:
@@ -23,7 +23,7 @@ class App extends Component {
   // - https://www.tildedave.com/2014/11/15/introduction-to-contexts-in-react-js.html
   getChildContext() {
     return {
-      myAppFramework7: this.myAppFramework7
+      f7App: this.f7App
     };
   }
 
@@ -52,7 +52,7 @@ class App extends Component {
 }
 
 App.childContextTypes = {
-  myAppFramework7: PropTypes.instanceOf(Framework7)
+  f7App: PropTypes.instanceOf(Framework7)
 };
 
 export default App;
