@@ -58,6 +58,8 @@ module.exports = {
     // https://github.com/webpack/docs/wiki/configuration#resolveroot
     // See: http://stackoverflow.com/questions/27502608/resolving-require-paths-with-webpack
     root: [FontAwesomeSCSSDir, NormalizeDir, framework7CSSDir, framework7JSDir],
+
+    extensions: ['', '.js', '.jsx']
   },
   output: {
     path: __dirname + '/build',
@@ -71,7 +73,7 @@ module.exports = {
     // http://webpack.github.io/docs/list-of-loaders.html
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.js[x]?$/,
         loaders: ['react-hot', 'babel?optional[]=runtime&stage=0', 'eslint'],
         exclude: /node_modules/
       },
