@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import 'framework7';
 
 import TopNavBar from 'components/top_nav_bar/top-nav-bar';
 
