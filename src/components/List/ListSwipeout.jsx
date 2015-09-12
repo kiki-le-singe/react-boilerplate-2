@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-import ListItemSwipeout from './list-item-swipeout';
+import ListItemSwipeout from './ListItemSwipeout';
 
 // Docs:
 // - http://www.idangero.us/framework7/docs/swipeout.html

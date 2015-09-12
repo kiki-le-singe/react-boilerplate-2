@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-import ListItem from './list-item';
+import ListItem from './ListItem';
 
 // Docs:
 // - http://www.idangero.us/framework7/docs/list-view.html

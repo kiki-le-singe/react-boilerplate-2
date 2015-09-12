@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Page from 'components/pages/page';
+import Page from 'components/Pages/Page';
 
 class Hello extends Page {
 

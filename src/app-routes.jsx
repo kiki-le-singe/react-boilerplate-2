@@ -5,13 +5,13 @@
   // http://jmfurlott.com/tutorial-setting-up-a-single-page-react-web-app-with-react-router-and-webpack/
 
 import React from 'react';
-import {Route, DefaultRoute, NotFoundRoute} from 'react-router';
+import { Route, DefaultRoute, NotFoundRoute } from 'react-router';
 
-import App from './components/app';
-import Home from './components/pages/home/home';
-import About from './components/pages/about/about';
-import Hello from './components/pages/hello/hello';
-import Tools from './components/pages/tools/tools';
+import App from 'components/App';
+import Home from 'components/Pages/Home/Home';
+import About from 'components/Pages/About/About';
+import Hello from 'components/Pages/Hello/Hello';
+import Tools from 'components/Pages/Tools/Tools';
 
 const AppRoutes = (
   <Route name="app" path="/" handler={App}>

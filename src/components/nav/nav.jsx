@@ -1,6 +1,6 @@
 import React from 'react';
 
-import List from 'components/list/list';
+import List from 'components/List/List';
 
 class Nav extends React.Component {
   render() {

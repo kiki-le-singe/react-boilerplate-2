@@ -1,10 +1,10 @@
-import React, {PropTypes, Component} from 'react';
-import {RouteHandler} from 'react-router';
+import React, { PropTypes, Component } from 'react';
+import { RouteHandler } from 'react-router';
 // The both Framework7 and Dom7 are exposed in window.*
 import 'framework7';
 
-import LeftSidePanel from './left_side_panel/left-side-panel';
-import RightSidePanel from './right_side_panel/right-side-panel';
+import LeftSidePanel from './LeftSidePanel/LeftSidePanel';
+import RightSidePanel from './RightSidePanel/RightSidePanel';
 
 class App extends Component {
 

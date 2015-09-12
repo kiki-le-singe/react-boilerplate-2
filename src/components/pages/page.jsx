@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-import TopNavBar from 'components/top_nav_bar/top-nav-bar';
+import TopNavBar from 'components/TopNavBar/TopNavBar';
 
 class Page extends React.Component {
 
