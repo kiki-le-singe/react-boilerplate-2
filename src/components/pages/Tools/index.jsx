@@ -1,3 +1,6 @@
+// Docs:
+// - https://github.com/facebook/flux/blob/master/examples/flux-todomvc/js/components/TodoApp.react.js
+
 import React from 'react';
 
 import Page from 'components/pages/Page';
