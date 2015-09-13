@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import ToolActions from 'actions/ToolActions';
 
 // Docs:
 // - http://www.idangero.us/framework7/docs/swipeout.html#overswipe
@@ -19,6 +20,7 @@ class ListItemSwipeout extends Component {
   }
 
   showAlert = () => {
+    ToolActions.delete(1);
     this.context.f7App.alert('Item removed');
   }
 
