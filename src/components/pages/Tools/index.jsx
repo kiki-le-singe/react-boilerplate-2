@@ -7,7 +7,8 @@ import ToolStore from 'stores/ToolStore';
 import ToolActions from 'actions/ToolActions';
 
 import Page from 'components/pages/Page';
-import ListSwipeout from 'components/lists/ListSwipeout';
+// import ListSwipeoutTools from 'components/lists/ListSwipeout';
+import ListSwipeoutTools from 'components/tools/ListSwipeoutTools';
 
 /**
  * Retrieve the current TOOL data from the ToolStore
@@ -62,7 +63,7 @@ class Tools extends Page {
       <div className="page-content">
         <div className="content-block-title">Tools</div>
         <div className="list-block media-list">
-          <ListSwipeout data={this.state.tools} />
+          <ListSwipeoutTools data={this.state.tools} />
         </div>
       </div>
     );
