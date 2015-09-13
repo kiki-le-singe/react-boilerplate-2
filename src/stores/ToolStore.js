@@ -46,6 +46,11 @@ export default toolStore;
 AppDispatcher.register((action) => {
   switch (action.actionType) {
 
+    case ToolConstants.TOOL_READ:
+      fetchAll(action.data);
+      toolStore.emitChange();
+      break;
+
     case ToolConstants.TOOL_DELETE:
       destroy(action.id);
       toolStore.emitChange();
