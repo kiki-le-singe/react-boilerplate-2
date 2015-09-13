@@ -4,6 +4,7 @@
 import React from 'react';
 
 import ToolStore from 'stores/ToolStore';
+import ToolActions from 'actions/ToolActions';
 
 import Page from 'components/pages/Page';
 import ListSwipeout from 'components/lists/ListSwipeout';
@@ -37,6 +38,7 @@ class Tools extends Page {
   componentDidMount() {
     super.componentDidMount();
 
+    ToolActions.fetchAll();
     ToolStore.addChangeListener(this.onChange);
   }
 
