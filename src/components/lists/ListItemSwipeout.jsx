@@ -1,9 +1,7 @@
 import React, { Component, PropTypes } from 'react';
-import ToolActions from 'actions/ToolActions';
 
 // Docs:
 // - http://www.idangero.us/framework7/docs/swipeout.html#overswipe
-// - https://github.com/facebook/flux/blob/master/examples/flux-todomvc/js/components/TodoItem.react.js
 
 class ListItemSwipeout extends Component {
 
