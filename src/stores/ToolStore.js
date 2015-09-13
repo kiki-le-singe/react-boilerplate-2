@@ -8,6 +8,12 @@ import ToolConstants from 'constants/ToolConstants';
 
 const CHANGE_EVENT = 'change';
 let tools = [];
+
+const fetchAll = (data) => {
+  tools = data;
+  console.log('fetch all tools');
+};
+
 const destroy = (id) => {
   // delete tools[id];
   console.log(`tool deleted: ${id}`);
