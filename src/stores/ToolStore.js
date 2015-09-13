@@ -8,6 +8,7 @@ import ToolConstants from 'constants/ToolConstants';
 
 const CHANGE_EVENT = 'change';
 let tools = [];
+const destroy = (id) => {
   // delete tools[id];
   console.log(`tool deleted: ${id}`);
 };
@@ -40,7 +41,7 @@ AppDispatcher.register((action) => {
   switch (action.actionType) {
 
     case ToolConstants.TOOL_DELETE:
-      deleteTool(action.id);
+      destroy(action.id);
       toolStore.emitChange();
       break;
 
