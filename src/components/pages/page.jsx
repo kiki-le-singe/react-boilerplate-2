@@ -1,8 +1,8 @@
-import React, { PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 import TopNavBar from 'components/TopNavBar';
 
-class Page extends React.Component {
+class Page extends Component {
 
   // Use React with Other Libraries:
   // - https://facebook.github.io/react/tips/use-react-with-other-libraries.html
