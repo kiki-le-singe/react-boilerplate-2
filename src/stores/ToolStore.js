@@ -2,6 +2,7 @@
 // - https://github.com/facebook/flux/blob/master/examples/flux-todomvc/js/stores/TodoStore.js
 
 import EventEmitter from 'events';
+
 import AppDispatcher from 'dispatcher/AppDispatcher';
 import ToolConstants from 'constants/ToolConstants';
 
