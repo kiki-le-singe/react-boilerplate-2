@@ -1,6 +1,8 @@
 {
     "rules": {
-        "indent": [2, 2],
+        "indent": [2, 2, {
+          "SwitchCase": 1
+        }],
         "quotes": [
             2,
             "single"
@@ -13,6 +15,7 @@
             2,
             "always"
         ],
+        "prefer-const": 1,
         "react/display-name": 0,
         "react/jsx-boolean-value": 2,
         "react/jsx-quotes": [2, "double"],
