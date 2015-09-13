@@ -34,6 +34,7 @@
     "bourbon": "^4.2.3",
     "bourbon-neat": "^1.7.2",
     "express": "^4.13.0",
+    "flux": "^2.1.1",
     "font-awesome": "^4.3.0",
     "framework7": "^1.2.0",
     "jquery": "^2.1.4",
