@@ -5,6 +5,12 @@ import React, { Component, PropTypes } from 'react';
 
 class ListItemSwipeout extends Component {
 
+  constructor() {
+    super();
+
+    this.showAlert = this.showAlert.bind(this);
+  }
+
   // Use React with Other Libraries:
   // - https://facebook.github.io/react/tips/use-react-with-other-libraries.html
   componentDidMount() {
@@ -17,8 +23,7 @@ class ListItemSwipeout extends Component {
     Dom7(this.swipeoutEl).off('deleted', this.showAlert);
   }
 
-  showAlert = () => {
-    ToolActions.delete(1);
+  showAlert() {
     this.context.f7App.alert('Item removed');
   }
 
