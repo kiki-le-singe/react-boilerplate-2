@@ -7,19 +7,7 @@ import AppDispatcher from 'dispatcher/AppDispatcher';
 import ToolConstants from 'constants/ToolConstants';
 
 const CHANGE_EVENT = 'change';
-const tools = [
-  {
-    title: 'React',
-    text: 'Lorem ipsum ...',
-    route: 'http://facebook.github.io/react/',
-  },
-  {
-    title: 'Flux',
-    text: 'Lorem ipsum ...',
-    route: 'https://facebook.github.io/flux/docs/overview.html',
-  }
-];
-const deleteTool = (id) => {
+let tools = [];
   // delete tools[id];
   console.log(`tool deleted: ${id}`);
 };
