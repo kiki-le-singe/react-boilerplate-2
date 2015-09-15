@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import classnames from 'classnames';
 
 // Docs:
 // - http://www.idangero.us/framework7/docs/swipeout.html#overswipe
@@ -28,13 +29,14 @@ class ListItemSwipeout extends Component {
   }
 
   render() {
-    const { route, title, text } = this.props;
+    const { route, title, text, prefixClassIcon, slug } = this.props;
+    const iconClassName = classnames('icon', [prefixClassIcon, slug].join(''));
 
     return (
       <li ref="swipeout" className="swipeout">
         <div className="swipeout-content">
           <a href={route} className="item-link item-content">
-            <div className="item-media"><i className="icon icon-f7"></i></div>
+            <div className="item-media"><i className={iconClassName}></i></div>
             <div className="item-inner">
               <div className="item-title-row">
                 <div className="item-title">{title}</div>
@@ -59,10 +61,16 @@ ListItemSwipeout.contextTypes = {
   f7App: PropTypes.instanceOf(Framework7)
 };
 
+ListItemSwipeout.defaultProps = {
+  prefixClassIcon: 'icon-'
+};
+
 ListItemSwipeout.propTypes = {
   route: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
+  prefixClassIcon: PropTypes.string
 };
 
 export default ListItemSwipeout;
