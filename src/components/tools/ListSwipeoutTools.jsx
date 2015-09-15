@@ -11,6 +11,7 @@ class ListSwipeoutTools extends ListSwipeout {
     return data.map((item, index) => {
       return (
         <ListItemSwipeoutTools
+          id={item.id}
           route={item.route}
           title={item.title}
           text={item.text}

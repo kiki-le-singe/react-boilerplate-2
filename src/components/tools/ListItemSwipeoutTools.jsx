@@ -12,7 +12,7 @@ class ListItemSwipeoutTools extends ListItemSwipeout {
   showAlert() {
     super.showAlert();
 
-    ToolActions.delete(3);
+    ToolActions.delete(this.props.id);
   }
 }
 

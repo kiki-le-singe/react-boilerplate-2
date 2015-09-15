@@ -16,9 +16,12 @@ export default {
   },
 
   delete(id) {
-    AppDispatcher.dispatch({
-      actionType: ToolConstants.TOOL_DELETE,
-      id: id
-    });
+    Tool.delete(id)
+      .then((data) => {
+        AppDispatcher.dispatch({
+          actionType: ToolConstants.TOOL_DELETE,
+          id: id
+        });
+      });
   }
 };
