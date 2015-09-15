@@ -15,7 +15,8 @@ const fetchAll = (data) => {
 };
 
 const destroy = (id) => {
-  // delete tools[id];
+  // Framework7 handles itself the deletion of a DOM element.
+  // So not need to handle it with the React setState() method.
   console.log(`tool deleted: ${id}`);
 };
 
