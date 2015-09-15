@@ -33,6 +33,7 @@ var NormalizeDir = path.resolve(nodeModulesDir, 'node.normalize.scss');
 var pathToReact = path.resolve(nodeModulesDir, 'react/dist/react.min.js');
 var pathToJQuery = path.resolve(nodeModulesDir, 'jquery/dist/jquery.min.js');
 var pathToFontAwesome = path.resolve(nodeModulesDir, 'font-awesome/css/font-awesome.min.css');
+var pathToFramework7 = path.resolve(nodeModulesDir, 'framework7/dist/js/framework7.min.js');
 
 module.exports = {
   // http://webpack.github.io/docs/configuration.html#devtool
@@ -48,7 +49,8 @@ module.exports = {
     // Optimizing rebundling: http://christianalfoni.github.io/react-webpack-cookbook/Optimizing-rebundling.html
     alias: {
       'jquery': pathToJQuery,
-      'font-awesome.scss': pathToFontAwesome
+      'font-awesome.scss': pathToFontAwesome,
+      'framework7': pathToFramework7
     },
 
     // Resolve the `./src` directory so we can avoid writing
@@ -67,7 +69,7 @@ module.exports = {
   },
   module: {
     // Optimizing rebundling: http://christianalfoni.github.io/react-webpack-cookbook/Optimizing-rebundling.html
-    noParse: [pathToJQuery, pathToFontAwesome],
+    noParse: [pathToJQuery, pathToFontAwesome, pathToFramework7],
 
     // http://webpack.github.io/docs/loaders.html
     // http://webpack.github.io/docs/list-of-loaders.html
