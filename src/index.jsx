@@ -8,6 +8,8 @@ import AppRoutes from './app-routes';
 import 'framework7.material.min.css';
 // Path to Framework7 MATERIAL related color styles
 import 'framework7.material.colors.min.css';
+// Path to svg logos icons
+import 'assets/vendors/icons.svg.scss';
 // import 'font-awesome.scss';
 import 'styles/scss/index.scss';
 
