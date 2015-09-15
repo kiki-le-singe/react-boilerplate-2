@@ -12,7 +12,13 @@ class ListSwipeout extends Component {
 
     return data.map((item, index) => {
       return (
-        <ListItemSwipeout route={item.route} title={item.title} text={item.text} key={index} />
+        <ListItemSwipeout
+          route={item.route}
+          title={item.title}
+          text={item.text}
+          slug={item.slug}
+          key={index}
+        />
       );
     });
   }

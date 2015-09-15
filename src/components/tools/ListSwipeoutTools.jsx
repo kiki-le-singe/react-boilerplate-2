@@ -10,7 +10,13 @@ class ListSwipeoutTools extends ListSwipeout {
 
     return data.map((item, index) => {
       return (
-        <ListItemSwipeoutTools route={item.route} title={item.title} text={item.text} key={index} />
+        <ListItemSwipeoutTools
+          route={item.route}
+          title={item.title}
+          text={item.text}
+          slug={item.slug}
+          key={index}
+        />
       );
     });
   }
