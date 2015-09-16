@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 
 import TopNavBar from 'components/TopNavBar';
+import FloatingButton from 'components/FloatingButton';
+
 const contextTypes = {
   f7App: PropTypes.instanceOf(Framework7)
 };
@@ -23,10 +25,15 @@ class Page extends Component {
     }
   }
 
+  renderFloatingButton() {
+    return this.props.isFloatingButtonEnabled ? <FloatingButton /> : false;
+  }
+
   render() {
     return (
       <div data-page={this.getDataPage()} className="page">
         <TopNavBar />
+        {this.renderFloatingButton()}
         {this.renderPage()}
       </div>
     );
