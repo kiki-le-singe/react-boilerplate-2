@@ -7,7 +7,6 @@ import ToolStore from 'stores/ToolStore';
 import ToolActions from 'actions/ToolActions';
 
 import Page from 'components/pages/Page';
-// import ListSwipeoutTools from 'components/lists/ListSwipeout';
 import ListSwipeoutTools from 'components/tools/ListSwipeoutTools';
 
 /**
