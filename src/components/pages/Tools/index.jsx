@@ -18,6 +18,10 @@ const getToolState = () => {
   };
 };
 
+const defaultProps = {
+  isFloatingButtonEnabled: true,
+};
+
 class Tools extends Page {
 
   // The class' constructor now assumes the role previously filled by componentWillMount
@@ -68,5 +72,7 @@ class Tools extends Page {
     );
   }
 }
+
+Tools.defaultProps = defaultProps;
 
 export default Tools;
