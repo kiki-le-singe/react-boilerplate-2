@@ -20,6 +20,22 @@ class Tool {
       });
     }
 
+    static fetchOne(id) {
+      return new Promise((resolve, reject) => {
+        request
+           .get(api.tools + '/' + id)
+           .end((err, res) => {
+             if (res.ok) {
+               resolve(res.body);
+             }
+             else {
+               console.error(api.tools, res.text); // eslint-disable-line
+               reject(res.text);
+             }
+           });
+      });
+    }
+
     static create(tool) {
       return new Promise((resolve, reject) => {
         request
