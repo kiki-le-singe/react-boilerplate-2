@@ -19,7 +19,7 @@ export default {
   fetchAll() {
     Tool.fetch().then((data) => {
       AppDispatcher.dispatch({
-        actionType: ToolConstants.TOOL_READ,
+        actionType: ToolConstants.TOOLS_FETCH,
         data: data
       });
     });

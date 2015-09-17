@@ -48,6 +48,7 @@ AppDispatcher.register((action) => {
   switch (action.actionType) {
 
     case ToolConstants.TOOL_READ:
+    case ToolConstants.TOOLS_FETCH:
       fetchAll(action.data);
       toolStore.emitChange();
       break;
