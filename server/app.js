@@ -42,6 +42,9 @@ router.get('/', function (request, response) {
   response.json({message: 'hooray! welcome to our api!'});
 });
 
+var tools = api.tools;
+var count = tools.length;
+
 router.route('/tools')
   // Get a list of tools
   .get(function (request, response) {
@@ -52,7 +55,6 @@ router.route('/tools')
   })
   // Post a tool
   .post(function (request, response) {
-    var tools = api.tools;
     var tool = request.body;
 
     tool.id = uniqid();
@@ -73,8 +75,6 @@ router.route('/tools/:id')
   })
   // Delete a tool
   .delete(function (request, response) {
-    var tools = api.tools;
-    var count = tools.length;
     var toolId = request.params.id;
 
     for (var i = 0; i < count; i++) {
