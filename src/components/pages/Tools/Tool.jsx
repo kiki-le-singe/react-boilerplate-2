@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'classnames';
 
 import ToolStore from 'stores/ToolStore';
 
@@ -61,10 +62,20 @@ class Tool extends Page {
   }
 
   renderPage() {
+    const { title, text, route, slug } = this.state.tool;
+    const iconClassName = classnames('icon', ['icon-', slug].join(''));
+
     return (
       <div className="page-content">
-        <div className="content-block-title">Tool</div>
-        <p>Here comes new page</p>
+        <div className="card">
+          <div className="card-header"><i className={iconClassName}></i>{title}</div>
+          <div className="card-content">
+            <div className="card-content-inner">{text}</div>
+          </div>
+          <div className="card-footer">
+            <a href={route} target="_blank">Read more</a>
+          </div>
+        </div>
       </div>
     );
   }
