@@ -4,10 +4,12 @@ import React, { PropTypes } from 'react';
 // - http://www.idangero.us/framework7/docs/navbar.html
 
 const propTypes = {
+  title: PropTypes.string,
   isBackPage: PropTypes.bool
 };
 
 const defaultProps = {
+  title: 'React Boilerplate 2',
   isBackPage: false
 };
 
@@ -32,13 +34,15 @@ class TopNavBar extends React.Component {
   }
 
   render() {
+    const { title } = this.props;
+
     return (
       <div className="navbar">
         <div className="navbar-inner">
           <div className="left">
             {this.renderLeftIcon()}
           </div>
-          <div className="left">React Boilerplate 2</div>
+          <div className="left">{title}</div>
         </div>
       </div>
     );
