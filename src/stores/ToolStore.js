@@ -10,6 +10,11 @@ const CHANGE_EVENT = 'change';
 let tools = [];
 let tool = {};
 
+const fetchOne = (data) => {
+  tool = data;
+  console.log('fetch all tools');
+};
+
 const fetchAll = (data) => {
   tools = data;
   console.log('fetch all tools');
@@ -53,7 +58,11 @@ export default toolStore;
 AppDispatcher.register((action) => {
   switch (action.actionType) {
 
-    case ToolConstants.TOOL_READ:
+    case ToolConstants.TOOL_FETCH:
+      fetchOne(action.data);
+      toolStore.emitChange();
+      break;
+
     case ToolConstants.TOOLS_FETCH:
       fetchAll(action.data);
       toolStore.emitChange();
