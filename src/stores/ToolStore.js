@@ -8,6 +8,7 @@ import ToolConstants from 'constants/ToolConstants';
 
 const CHANGE_EVENT = 'change';
 let tools = [];
+let tool = {};
 
 const fetchAll = (data) => {
   tools = data;
@@ -21,6 +22,11 @@ const destroy = (id) => {
 };
 
 class ToolStore extends EventEmitter {
+
+  // Get one tool.
+  getOne() {
+    return tool;
+  }
 
   // Get the entire collection of tools.
   getAll() {
