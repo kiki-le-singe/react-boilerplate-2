@@ -41,8 +41,7 @@ class Page extends Component {
 
   render() {
     return (
-      <div data-page={this.getDataPage()} className="page">
-        <TopNavBar />
+      <div id={this.getDataPage()} data-page={this.getDataPage()} className={this.getClassNames()}>
         {this.renderTopNavBar()}
         {this.renderFloatingButton()}
         {this.renderPage()}
