@@ -8,12 +8,13 @@ const contextTypes = {
 };
 
 const propTypes = {
-  isFloatingButtonEnabled: PropTypes.bool
   isFloatingButtonEnabled: PropTypes.bool,
+  isPageCached: PropTypes.bool
 };
 
 const defaultProps = {
   isFloatingButtonEnabled: false,
+  isPageCached: false
 };
 
 class Page extends Component {
@@ -24,6 +25,10 @@ class Page extends Component {
     if (this.context.f7App) {
       this.context.f7App.closePanel();
     }
+  }
+
+  getClassNames() {
+    return this.props.isPageCached ? classnames('page', 'cached') : 'page';
   }
 
   renderFloatingButton() {
