@@ -12,7 +12,8 @@ class App extends Component {
   componentDidMount() {
     // http://www.idangero.us/framework7/docs/init-app.html
     this.f7App = new Framework7({
-      swipePanel: 'left' // http://www.idangero.us/framework7/docs/side-panels.html#open-panels-with-swipe
+      swipePanel: 'left', // http://www.idangero.us/framework7/docs/side-panels.html#open-panels-with-swipe
+      ajaxLinks: 'a.ajax'
     });
   }
 

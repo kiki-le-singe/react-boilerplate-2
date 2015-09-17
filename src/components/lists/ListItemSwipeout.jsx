@@ -53,7 +53,7 @@ class ListItemSwipeout extends Component {
     return (
       <li ref="swipeout" className="swipeout">
         <div className="swipeout-content">
-          <a href="#" className="item-link item-content" onClick={this.handleClick}>
+          <a href="#" className="item-link item-content ajax" onClick={this.handleClick}>
             <div className="item-media"><i className={iconClassName}></i></div>
             <div className="item-inner">
               <div className="item-title-row">
@@ -64,11 +64,11 @@ class ListItemSwipeout extends Component {
           </a>
         </div>
         <div className="swipeout-actions-left">
-          <a href="#" className="bg-blue edit">Edit</a>
+          <a href="#" className="bg-blue edit ajax">Edit</a>
         </div>
         <div className="swipeout-actions-right">
-          <a href="#" className="mark bg-orange">Mark</a>
-          <a href="#" className="swipeout-delete swipeout-overswipe">Delete</a>
+          <a href="#" className="mark bg-orange ajax">Mark</a>
+          <a href="#" className="swipeout-delete swipeout-overswipe ajax">Delete</a>
         </div>
       </li>
     );

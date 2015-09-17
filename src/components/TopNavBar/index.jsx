@@ -20,14 +20,14 @@ class TopNavBar extends React.Component {
 
     if (isBackPage) {
       return (
-        <a href="#" className="back link icon-only">
+        <a href="#" className="back link icon-only ajax">
           <i className="icon icon-back"></i>
         </a>
       );
     }
 
     return (
-      <a href="#" className="open-panel link icon-only">
+      <a href="#" className="open-panel link icon-only ajax">
         <i className="icon icon-bars"></i>
       </a>
     );
