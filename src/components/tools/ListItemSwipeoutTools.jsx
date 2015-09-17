@@ -21,6 +21,8 @@ class ListItemSwipeoutTools extends ListItemSwipeout {
       domCache: true //enable inline pages
     });
 
+    ToolActions.fetchOne(this.props.id);
+
     // Load about page:
     mainView.router.load({pageName: 'tool'});
   }
