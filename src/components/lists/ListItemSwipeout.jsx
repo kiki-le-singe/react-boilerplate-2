@@ -40,6 +40,8 @@ class ListItemSwipeout extends Component {
     Dom7(this.swipeoutEl).off('deleted', this.showAlert);
   }
 
+  handleClick() {}
+
   showAlert() {
     this.context.f7App.alert('Item removed');
   }
