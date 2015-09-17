@@ -61,6 +61,16 @@ router.route('/tools')
   });
 
 router.route('/tools/:id')
+  // Get one tool
+  .get(function (request, response) {
+    var toolId = request.params.id;
+
+    for (var i = 0; i < count; i++) {
+      if (tools[i].id == toolId) {
+        return response.status(200).json(tools[i]);
+      }
+    }
+  })
   // Delete a tool
   .delete(function (request, response) {
     var tools = api.tools;
