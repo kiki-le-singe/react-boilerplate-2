@@ -53,7 +53,7 @@ class ListItemSwipeout extends Component {
     return (
       <li ref="swipeout" className="swipeout">
         <div className="swipeout-content">
-          <a href={route} className="item-link item-content">
+          <a href="#" className="item-link item-content" onClick={this.handleClick}>
             <div className="item-media"><i className={iconClassName}></i></div>
             <div className="item-inner">
               <div className="item-title-row">
