@@ -5,6 +5,7 @@ import 'framework7';
 
 import LeftSidePanel from './LeftSidePanel';
 import RightSidePanel from './RightSidePanel';
+import ToolPage from 'components/pages/Tools/Tool';
 
 class App extends Component {
 
@@ -43,6 +44,8 @@ class App extends Component {
           <div className="view view-main">
             <div className="pages navbar-fixed">
               <RouteHandler />
+              { /* TODO find another way to correct this smell code to inject the ToolPage. */ }
+              <ToolPage />
             </div>
           </div>
         </div>
