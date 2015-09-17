@@ -4,6 +4,22 @@ import classnames from 'classnames';
 // Docs:
 // - http://www.idangero.us/framework7/docs/swipeout.html#overswipe
 
+const contextTypes = {
+  f7App: PropTypes.instanceOf(Framework7)
+};
+
+const propTypes = {
+  route: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
+  prefixClassIcon: PropTypes.string
+};
+
+const defaultProps = {
+  prefixClassIcon: 'icon-'
+};
+
 class ListItemSwipeout extends Component {
 
   constructor() {
@@ -57,20 +73,8 @@ class ListItemSwipeout extends Component {
   }
 }
 
-ListItemSwipeout.contextTypes = {
-  f7App: PropTypes.instanceOf(Framework7)
-};
-
-ListItemSwipeout.defaultProps = {
-  prefixClassIcon: 'icon-'
-};
-
-ListItemSwipeout.propTypes = {
-  route: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  slug: PropTypes.string.isRequired,
-  prefixClassIcon: PropTypes.string
-};
+ListItemSwipeout.contextTypes = contextTypes;
+ListItemSwipeout.defaultProps = defaultProps;
+ListItemSwipeout.propTypes = propTypes;
 
 export default ListItemSwipeout;
