@@ -35,10 +35,15 @@ class Page extends Component {
     return this.props.isFloatingButtonEnabled ? <FloatingButton /> : false;
   }
 
+  renderTopNavBar() {
+    return <TopNavBar />;
+  }
+
   render() {
     return (
       <div data-page={this.getDataPage()} className="page">
         <TopNavBar />
+        {this.renderTopNavBar()}
         {this.renderFloatingButton()}
         {this.renderPage()}
       </div>
