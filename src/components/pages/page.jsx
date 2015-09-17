@@ -9,6 +9,7 @@ const contextTypes = {
 
 const propTypes = {
   isFloatingButtonEnabled: PropTypes.bool
+  isFloatingButtonEnabled: PropTypes.bool,
 };
 
 const defaultProps = {
