@@ -8,6 +8,7 @@ import ToolActions from 'actions/ToolActions';
 
 import Page from 'components/pages/Page';
 import ListSwipeoutTools from 'components/tools/ListSwipeoutTools';
+import FloatingButtonTools from 'components/tools/FloatingButtonTools';
 
 /**
  * Retrieve the current TOOL data from the ToolStore
@@ -59,6 +60,12 @@ class Tools extends Page {
    */
   onChange = () => {
     this.setState(getToolState());
+  }
+
+  renderFloatingButton() {
+    return (
+      <FloatingButtonTools />
+    );
   }
 
   renderPage() {
