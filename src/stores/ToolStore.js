@@ -12,7 +12,7 @@ let tool = {};
 
 const fetchOne = (data) => {
   tool = data;
-  console.log('fetch all tools');
+  console.log(`fetch ${data.title} tool`);
 };
 
 const fetchAll = (data) => {
