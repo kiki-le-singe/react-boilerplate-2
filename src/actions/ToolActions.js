@@ -8,7 +8,6 @@ import Tool from 'services/tool';
 export default {
   fetchOne(id) {
     Tool.fetchOne(id).then((data) => {
-      debugger;
       AppDispatcher.dispatch({
         actionType: ToolConstants.TOOL_FETCH,
         data: data
