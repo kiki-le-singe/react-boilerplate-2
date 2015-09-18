@@ -5,31 +5,60 @@ import React, { PropTypes } from 'react';
 
 const propTypes = {
   title: PropTypes.string,
-  isBackPage: PropTypes.bool
+  isBackPage: PropTypes.bool,
+  iconElementRight: PropTypes.element,
+  isLeftIcon: PropTypes.bool
 };
 
 const defaultProps = {
   title: 'React Boilerplate 2',
-  isBackPage: false
+  isBackPage: false,
+  isLeftIcon: true
 };
 
 class TopNavBar extends React.Component {
 
   renderLeftIcon() {
-    const { isBackPage } = this.props;
+    const { isLeftIcon, isBackPage } = this.props;
+    let icon;
+
+    if (!isLeftIcon) {
+      return false;
+    }
 
     if (isBackPage) {
-      return (
+      icon = (
         <a href="#" className="back link icon-only ajax">
           <i className="icon icon-back"></i>
         </a>
       );
     }
+    else {
+      icon = (
+        <a href="#" className="open-panel link icon-only ajax">
+          <i className="icon icon-bars"></i>
+        </a>
+      );
+    }
 
     return (
-      <a href="#" className="open-panel link icon-only ajax">
-        <i className="icon icon-bars"></i>
-      </a>
+      <div className="left">
+        {icon}
+      </div>
+    );
+  }
+
+  renderRightIcon() {
+    const { iconElementRight } = this.props;
+
+    if (!iconElementRight) {
+      return false;
+    }
+
+    return (
+      <div className="right">
+        {iconElementRight}
+      </div>
     );
   }
 
@@ -39,10 +68,9 @@ class TopNavBar extends React.Component {
     return (
       <div className="navbar">
         <div className="navbar-inner">
-          <div className="left">
-            {this.renderLeftIcon()}
-          </div>
+          {this.renderLeftIcon()}
           <div className="left">{title}</div>
+          {this.renderRightIcon()}
         </div>
       </div>
     );
