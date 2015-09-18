@@ -6,6 +6,7 @@ import 'framework7';
 import LeftSidePanel from './LeftSidePanel';
 import RightSidePanel from './RightSidePanel';
 import ToolPage from 'components/pages/Tools/Tool';
+import PopupCreateTool from 'components/popup/tools/PopupCreateTool';
 
 class App extends Component {
 
@@ -51,6 +52,7 @@ class App extends Component {
             </div>
           </div>
         </div>
+        <PopupCreateTool />
       </div>
     );
   }
