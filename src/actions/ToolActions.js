@@ -6,6 +6,15 @@ import Tool from 'services/tool';
 // - https://github.com/facebook/flux/blob/master/examples/flux-todomvc/js/actions/TodoActions.js
 
 export default {
+  create(tool) {
+    return Tool.create(tool).then((data) => {
+      AppDispatcher.dispatch({
+        actionType: ToolConstants.TOOL_CREATE,
+        data: data
+      });
+    });
+  },
+
   fetchOne(id) {
     Tool.fetchOne(id).then((data) => {
       AppDispatcher.dispatch({
