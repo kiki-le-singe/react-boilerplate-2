@@ -37,8 +37,6 @@ class Tool extends Page {
   }
 
   componentDidMount() {
-    super.componentDidMount();
-
     ToolStore.addChangeListener(this.onChange);
   }
 
