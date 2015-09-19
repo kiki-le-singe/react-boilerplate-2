@@ -16,7 +16,7 @@ export default {
   },
 
   fetchOne(id) {
-    Tool.fetchOne(id).then((data) => {
+    return Tool.fetchOne(id).then((data) => {
       AppDispatcher.dispatch({
         actionType: ToolConstants.TOOL_FETCH,
         data: data
@@ -25,7 +25,7 @@ export default {
   },
 
   fetchAll() {
-    Tool.fetch().then((data) => {
+    return Tool.fetch().then((data) => {
       AppDispatcher.dispatch({
         actionType: ToolConstants.TOOLS_FETCH,
         data: data
@@ -34,7 +34,7 @@ export default {
   },
 
   delete(id) {
-    Tool.delete(id)
+    return Tool.delete(id)
       .then((data) => {
         AppDispatcher.dispatch({
           actionType: ToolConstants.TOOL_DELETE,
