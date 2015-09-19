@@ -10,6 +10,11 @@ const CHANGE_EVENT = 'change';
 let tools = [];
 let tool = {};
 
+const create = (data) => {
+  tools = data;
+  console.log('add item tool');
+};
+
 const fetchOne = (data) => {
   tool = data;
   console.log(`fetch ${data.title} tool`);
@@ -57,6 +62,11 @@ export default toolStore;
 
 AppDispatcher.register((action) => {
   switch (action.actionType) {
+
+    case ToolConstants.TOOL_CREATE:
+      create(action.data);
+      toolStore.emitChange();
+      break;
 
     case ToolConstants.TOOL_FETCH:
       fetchOne(action.data);
