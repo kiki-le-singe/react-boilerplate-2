@@ -7,6 +7,7 @@ import ListItemSwipeout from 'components/lists/ListItemSwipeout';
 // Docs:
 // - https://github.com/facebook/flux/blob/master/examples/flux-todomvc/js/components/TodoItem.react.js
 // - http://www.idangero.us/framework7/docs/pages-inline.html
+// - http://www.idangero.us/framework7/docs/modal.html#indicator
 
 const contextTypes = {
   f7App: PropTypes.instanceOf(Framework7)
@@ -21,7 +22,13 @@ class ListItemSwipeoutTools extends ListItemSwipeout {
       domCache: true //enable inline pages
     });
 
-    ToolActions.fetchOne(this.props.id);
+    // Show loader
+    this.context.f7App.showIndicator();
+
+    ToolActions.fetchOne(this.props.id).then(() => {
+      // Hide loader
+      this.context.f7App.hideIndicator();
+    });
 
     // Load about page:
     mainView.router.load({pageName: 'tool'});

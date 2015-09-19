@@ -1,5 +1,6 @@
 // Docs:
 // - https://github.com/facebook/flux/blob/master/examples/flux-todomvc/js/components/TodoApp.react.js
+// - http://www.idangero.us/framework7/docs/modal.html#indicator
 
 import React from 'react';
 
@@ -26,8 +27,11 @@ const defaultProps = {
 class Tools extends Page {
 
   // The class' constructor now assumes the role previously filled by componentWillMount
-  constructor(props) {
-    super(props);
+  constructor(props, context) {
+    super(props, context);
+
+    // Show loader
+    this.context.f7App.showIndicator();
 
     // Warning: getInitialState() is only supported for classes created using React.createClass.
     // getInitialState() executes exactly once during the lifecycle of the component
@@ -43,7 +47,10 @@ class Tools extends Page {
   componentDidMount() {
     super.componentDidMount();
 
-    ToolActions.fetchAll();
+    ToolActions.fetchAll().then(() => {
+      // Hide loader
+      this.context.f7App.hideIndicator();
+    });
     ToolStore.addChangeListener(this.onChange);
   }
 

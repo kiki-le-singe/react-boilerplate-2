@@ -10,6 +10,7 @@ import IconButton from 'components/IconButton';
 // Docs:
 // - http://www.idangero.us/framework7/docs/popup.html
 // - http://www.idangero.us/framework7/docs/form-elements.html
+// - http://www.idangero.us/framework7/docs/modal.html#indicator
 
 const contextTypes = {
   f7App: PropTypes.instanceOf(Framework7)
@@ -41,6 +42,9 @@ class PopupCreateTool extends Component {
       return;
     }
 
+    // Show loader
+    this.context.f7App.showIndicator();
+
     // Send request to the server
     ToolActions.create({
       id: uniqid(),
@@ -52,6 +56,9 @@ class PopupCreateTool extends Component {
       titleEL.value = '';
       textEl.value = '';
       routeEl.value = '';
+
+      // Hide loader
+      this.context.f7App.hideIndicator();
 
       this.context.f7App.closeModal(popupCreateToolEl);
     });
