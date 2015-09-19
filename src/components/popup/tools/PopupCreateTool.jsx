@@ -5,6 +5,7 @@ import IconButton from 'components/IconButton';
 
 // Docs:
 // - http://www.idangero.us/framework7/docs/popup.html
+// - http://www.idangero.us/framework7/docs/form-elements.html
 
 class PopupCreateTool extends React.Component {
 
