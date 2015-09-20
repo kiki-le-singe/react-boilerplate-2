@@ -37,7 +37,7 @@ var pathToFramework7 = path.resolve(nodeModulesDir, 'framework7/dist/js/framewor
 
 module.exports = {
   // http://webpack.github.io/docs/configuration.html#devtool
-  devtool: 'eval-source-map',
+  devtool: 'source-map',
   entry: {
     javascript: [
       'webpack-dev-server/client?http://localhost:8080',
