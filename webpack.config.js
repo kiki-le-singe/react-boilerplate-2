@@ -90,7 +90,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style', 'css!sass')
+        loader: ExtractTextPlugin.extract('css?sourceMap!sass?sourceMap')
       },
       {
         test: /\.(png|jpe?g)$/,
