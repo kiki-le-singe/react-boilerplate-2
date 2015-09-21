@@ -10,6 +10,7 @@ import ToolActions from 'actions/ToolActions';
 import Page from 'components/pages/Page';
 import ListSwipeoutTools from 'components/tools/ListSwipeoutTools';
 import FloatingButtonTools from 'components/tools/FloatingButtonTools';
+import SearchTools from 'components/tools/SearchTools';
 
 /**
  * Retrieve the current TOOL data from the ToolStore
@@ -78,7 +79,9 @@ class Tools extends Page {
   renderPage() {
     return (
       <div className="page-content">
-        <div className="content-block-title">Tools</div>
+
+        <SearchTools />
+
         <div className="list-block media-list">
           <ListSwipeoutTools data={this.state.tools} />
         </div>
