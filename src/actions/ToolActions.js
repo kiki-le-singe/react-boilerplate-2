@@ -41,5 +41,12 @@ export default {
           id: id
         });
       });
+  },
+
+  search(value) {
+    AppDispatcher.dispatch({
+      actionType: ToolConstants.TOOL_SEARCH,
+      value: value
+    });
   }
 };
