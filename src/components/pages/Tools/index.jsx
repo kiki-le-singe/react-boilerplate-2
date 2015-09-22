@@ -17,7 +17,8 @@ import SearchTools from 'components/tools/SearchTools';
  */
 const getToolState = () => {
   return {
-    tools: ToolStore.getAll()
+    tools: ToolStore.getAll(),
+    searchValue: ToolStore.searchValue()
   };
 };
 
@@ -83,7 +84,7 @@ class Tools extends Page {
         <SearchTools />
 
         <div className="list-block media-list">
-          <ListSwipeoutTools data={this.state.tools} />
+          <ListSwipeoutTools searchValue={this.state.searchValue} data={this.state.tools} />
         </div>
       </div>
     );
