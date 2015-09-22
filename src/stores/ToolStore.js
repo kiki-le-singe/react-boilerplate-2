@@ -9,6 +9,7 @@ import ToolConstants from 'constants/ToolConstants';
 const CHANGE_EVENT = 'change';
 let tools = [];
 let tool = {};
+let searchValue = '';
 
 const create = (data) => {
   tools = data;
@@ -31,6 +32,10 @@ const destroy = (id) => {
   console.log(`tool deleted: ${id}`);
 };
 
+const search = (value) => {
+  searchValue = value;
+};
+
 class ToolStore extends EventEmitter {
 
   // Get one tool.
@@ -41,6 +46,11 @@ class ToolStore extends EventEmitter {
   // Get the entire collection of tools.
   getAll() {
     return tools;
+  }
+
+  // Get the value to searched.
+  searchValue() {
+    return searchValue;
   }
 
   emitChange() {
@@ -80,6 +90,11 @@ AppDispatcher.register((action) => {
 
     case ToolConstants.TOOL_DELETE:
       destroy(action.id);
+      toolStore.emitChange();
+      break;
+
+    case ToolConstants.TOOL_SEARCH:
+      search(action.value);
       toolStore.emitChange();
       break;
 
