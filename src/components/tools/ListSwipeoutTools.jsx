@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 import ListSwipeout from 'components/lists/ListSwipeout';
 import ListItemSwipeoutTools from './ListItemSwipeoutTools';
+
+const propTypes = {
+  data: PropTypes.array,
+  searchValue: PropTypes.string
+};
+
+const defaultProps = {
+  data: [],
+  searchValue: ''
+};
 
 class ListSwipeoutTools extends ListSwipeout {
 
@@ -22,5 +32,8 @@ class ListSwipeoutTools extends ListSwipeout {
     });
   }
 }
+
+ListSwipeoutTools.propTypes = propTypes;
+ListSwipeoutTools.defaultProps = defaultProps;
 
 export default ListSwipeoutTools;
