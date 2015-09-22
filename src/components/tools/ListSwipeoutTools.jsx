@@ -16,9 +16,16 @@ const defaultProps = {
 class ListSwipeoutTools extends ListSwipeout {
 
   getDatas() {
-    const { data } = this.props;
+    const { data, searchValue } = this.props;
+    let tools = data;
 
-    return data.map((item, index) => {
+    if (searchValue) {
+      tools = tools.filter( tool => {
+        return tool.title.toLowerCase().search(searchValue.toLowerCase()) !== -1;
+      });
+    }
+
+    return tools.map((item, index) => {
       return (
         <ListItemSwipeoutTools
           id={item.id}
