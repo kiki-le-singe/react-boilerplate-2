@@ -4,11 +4,8 @@ import ToolActions from 'actions/ToolActions';
 
 class SearchTools extends Component {
 
-  handleChange = () => {
-    const searchEl = findDOMNode(this.refs.search);
-    const value = searchEl.value.trim();
-
-    ToolActions.search(value);
+  handleChange = (e) => {
+    ToolActions.search(e.target.value);
   }
 
   render() {
@@ -21,7 +18,7 @@ class SearchTools extends Component {
                 <div className="item-inner">
                   <div className="item-title floating-label">Search</div>
                   <div className="item-input">
-                    <input ref="search" type="text" onChange={this.handleChange} />
+                    <input type="text" onChange={this.handleChange} />
                   </div>
                 </div>
               </div>
