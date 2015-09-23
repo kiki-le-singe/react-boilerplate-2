@@ -44,7 +44,6 @@
     "react": "^0.13.3",
     "react-intl": "^1.2.0",
     "react-router": "^1.0.0-rc1",
-    "react-tap-event-plugin": "^0.1.7",
     "superagent": "^1.2.0",
     "uniqid": "^1.0.0"
   },
