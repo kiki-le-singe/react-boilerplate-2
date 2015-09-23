@@ -4,10 +4,6 @@ import classnames from 'classnames';
 import TopNavBar from 'components/TopNavBar';
 import FloatingButton from 'components/FloatingButton';
 
-const contextTypes = {
-  f7App: PropTypes.instanceOf(Framework7)
-};
-
 const propTypes = {
   isFloatingButtonEnabled: PropTypes.bool,
   isPageCached: PropTypes.bool
@@ -23,8 +19,8 @@ class Page extends Component {
   // Use React with Other Libraries:
   // - https://facebook.github.io/react/tips/use-react-with-other-libraries.html
   componentDidMount() {
-    if (this.context.f7App) {
-      this.context.f7App.closePanel();
+    if (f7App) {
+      f7App.closePanel();
     }
   }
 
@@ -53,6 +49,5 @@ class Page extends Component {
 
 Page.propTypes = propTypes;
 Page.defaultProps = defaultProps;
-Page.contextTypes = contextTypes;
 
 export default Page;

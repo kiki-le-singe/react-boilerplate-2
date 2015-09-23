@@ -1,6 +1,4 @@
 import React, { PropTypes, Component } from 'react';
-// The both Framework7 and Dom7 are exposed in window.*
-import 'framework7';
 
 import LeftSidePanel from './LeftSidePanel';
 import RightSidePanel from './RightSidePanel';
@@ -12,28 +10,6 @@ const propTypes = {
 };
 
 class App extends Component {
-
-  componentDidMount() {
-    // http://www.idangero.us/framework7/docs/init-app.html
-    this.f7App = new Framework7({
-      swipePanel: 'left', // http://www.idangero.us/framework7/docs/side-panels.html#open-panels-with-swipe
-      ajaxLinks: 'a.ajax',
-      material: true
-    });
-  }
-
-  componentWillUnmount() {
-    this.f7App = null;
-  }
-
-  // Understand using React Context:
-  // - https://facebook.github.io/react/blog/2014/03/28/the-road-to-1.0.html#context
-  // - https://www.tildedave.com/2014/11/15/introduction-to-contexts-in-react-js.html
-  getChildContext() {
-    return {
-      f7App: this.f7App
-    };
-  }
 
   render() {
     return (
@@ -63,9 +39,5 @@ class App extends Component {
 }
 
 App.propTypes = propTypes;
-
-App.childContextTypes = {
-  f7App: PropTypes.instanceOf(Framework7)
-};
 
 export default App;

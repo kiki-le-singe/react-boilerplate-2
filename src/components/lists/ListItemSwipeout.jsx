@@ -4,10 +4,6 @@ import classnames from 'classnames';
 // Docs:
 // - http://www.idangero.us/framework7/docs/swipeout.html#overswipe
 
-const contextTypes = {
-  f7App: PropTypes.instanceOf(Framework7)
-};
-
 const propTypes = {
   route: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
@@ -43,7 +39,7 @@ class ListItemSwipeout extends Component {
   handleClick() {}
 
   showAlert() {
-    this.context.f7App.alert('Item removed');
+    f7App.alert('Item removed');
   }
 
   render() {
@@ -75,7 +71,6 @@ class ListItemSwipeout extends Component {
   }
 }
 
-ListItemSwipeout.contextTypes = contextTypes;
 ListItemSwipeout.defaultProps = defaultProps;
 ListItemSwipeout.propTypes = propTypes;
 

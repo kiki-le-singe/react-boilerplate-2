@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
 import ToolActions from 'actions/ToolActions';
 
@@ -9,25 +9,21 @@ import ListItemSwipeout from 'components/lists/ListItemSwipeout';
 // - http://www.idangero.us/framework7/docs/pages-inline.html
 // - http://www.idangero.us/framework7/docs/modal.html#indicator
 
-const contextTypes = {
-  f7App: PropTypes.instanceOf(Framework7)
-};
-
 class ListItemSwipeoutTools extends ListItemSwipeout {
 
   // Show the full Tool page.
   handleClick = () => {
     // Init main view
-    const mainView = this.context.f7App.addView('.view-main', {
+    const mainView = f7App.addView('.view-main', {
       domCache: true //enable inline pages
     });
 
     // Show loader
-    this.context.f7App.showIndicator();
+    f7App.showIndicator();
 
     ToolActions.fetchOne(this.props.id).then(() => {
       // Hide loader
-      this.context.f7App.hideIndicator();
+      f7App.hideIndicator();
     });
 
     // Load about page:
@@ -40,7 +36,5 @@ class ListItemSwipeoutTools extends ListItemSwipeout {
     ToolActions.delete(this.props.id);
   }
 }
-
-ListItemSwipeoutTools.contextTypes = contextTypes;
 
 export default ListItemSwipeoutTools;

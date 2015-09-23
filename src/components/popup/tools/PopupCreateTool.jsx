@@ -1,4 +1,4 @@
-import React, { Component, PropTypes, findDOMNode } from 'react';
+import React, { Component, findDOMNode } from 'react';
 import _ from 'lodash';
 import uniqid from 'uniqid';
 
@@ -11,10 +11,6 @@ import IconButton from 'components/IconButton';
 // - http://www.idangero.us/framework7/docs/popup.html
 // - http://www.idangero.us/framework7/docs/form-elements.html
 // - http://www.idangero.us/framework7/docs/modal.html#indicator
-
-const contextTypes = {
-  f7App: PropTypes.instanceOf(Framework7)
-};
 
 class PopupCreateTool extends Component {
 
@@ -43,7 +39,7 @@ class PopupCreateTool extends Component {
     }
 
     // Show loader
-    this.context.f7App.showIndicator();
+    f7App.showIndicator();
 
     // Send request to the server
     ToolActions.create({
@@ -58,9 +54,9 @@ class PopupCreateTool extends Component {
       routeEl.value = '';
 
       // Hide loader
-      this.context.f7App.hideIndicator();
+      f7App.hideIndicator();
 
-      this.context.f7App.closeModal(popupCreateToolEl);
+      f7App.closeModal(popupCreateToolEl);
     });
   }
 
@@ -125,7 +121,5 @@ class PopupCreateTool extends Component {
     );
   }
 }
-
-PopupCreateTool.contextTypes = contextTypes;
 
 export default PopupCreateTool;
