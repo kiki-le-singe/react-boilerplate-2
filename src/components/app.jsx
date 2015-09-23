@@ -1,5 +1,4 @@
 import React, { PropTypes, Component } from 'react';
-import { RouteHandler } from 'react-router';
 // The both Framework7 and Dom7 are exposed in window.*
 import 'framework7';
 
@@ -7,6 +6,10 @@ import LeftSidePanel from './LeftSidePanel';
 import RightSidePanel from './RightSidePanel';
 import ToolPage from 'components/pages/Tools/Tool';
 import PopupCreateTool from 'components/popup/tools/PopupCreateTool';
+
+const propTypes = {
+  children: PropTypes.object
+};
 
 class App extends Component {
 
@@ -47,7 +50,7 @@ class App extends Component {
         <div className="views">
           <div className="view view-main">
             <div className="pages navbar-fixed">
-              <RouteHandler />
+              { this.props.children }
               { /* TODO find another way to correct this smell code to inject the ToolPage. */ }
               <ToolPage />
             </div>
@@ -58,6 +61,8 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = propTypes;
 
 App.childContextTypes = {
   f7App: PropTypes.instanceOf(Framework7)
