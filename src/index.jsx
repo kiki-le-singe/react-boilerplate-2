@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-import AppRouter from './app-routes';
+import AppRouter from './AppRouter';
 
 // *** STYLES *** //
 // Path to Framework7 MATERIAL CSS theme styles
