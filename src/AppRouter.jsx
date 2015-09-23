@@ -22,6 +22,8 @@ const AppRouter = (
       <Route path="hello" component={Hello} />
       <Route path="about" component={About} />
       <Route path="tools" component={Tools} />
+      { /* https://github.com/rackt/react-router/blob/master/UPGRADE_GUIDE.md#notfound-route */ }
+      <Route path="*" component={Home}/>
     </Route>
   </Router>
 );
