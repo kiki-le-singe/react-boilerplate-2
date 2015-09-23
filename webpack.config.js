@@ -61,7 +61,7 @@ module.exports = {
     // See: http://stackoverflow.com/questions/27502608/resolving-require-paths-with-webpack
     root: [FontAwesomeSCSSDir, NormalizeDir, framework7CSSDir, framework7JSDir],
 
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx', '.css', '.scss']
   },
   output: {
     path: __dirname + '/build',

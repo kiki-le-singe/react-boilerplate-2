@@ -5,13 +5,13 @@ import AppRoutes from './app-routes';
 
 // *** STYLES *** //
 // Path to Framework7 MATERIAL CSS theme styles
-import 'framework7.material.min.css';
+import 'framework7.material.min';
 // Path to Framework7 MATERIAL related color styles
-import 'framework7.material.colors.min.css';
+import 'framework7.material.colors.min';
 // Path to svg logos icons
-import 'assets/vendors/icons.svg.scss';
-import 'font-awesome.scss';
-import 'styles/scss/index.scss';
+import 'assets/vendors/icons.svg';
+import 'font-awesome';
+import 'styles/scss/index';
 
 $(() => {
   // https://github.com/rackt/react-router/blob/master/docs/guides/overview.md
