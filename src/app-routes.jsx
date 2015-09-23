@@ -1,8 +1,8 @@
-// https://github.com/rackt/react-router
-// http://rackt.github.io/react-router/
-
-// References:
-  // http://jmfurlott.com/tutorial-setting-up-a-single-page-react-web-app-with-react-router-and-webpack/
+// Docs:
+  // - https://github.com/rackt/react-router
+  // - https://github.com/rackt/react-router/blob/master/docs/guides/basics/RouteConfiguration.md
+  // - https://github.com/rackt/react-router/blob/master/docs/API.md
+  // - https://github.com/rackt/react-router/blob/master/docs/guides/basics/Histories.md
 
 import React from 'react';
 import { Route, DefaultRoute, NotFoundRoute } from 'react-router';
