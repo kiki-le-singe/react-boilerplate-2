@@ -30,6 +30,14 @@ const framework7JSDir = path.resolve(nodeModulesDir, 'framework7/dist/js');
 const framework7CSSDir = path.resolve(nodeModulesDir, 'framework7/dist/css');
 const FontAwesomeSCSSDir = path.resolve(nodeModulesDir, 'font-awesome/scss');
 
+const deps = [
+  'flux/dist/Flux.min.js',
+  'jquery/dist/jquery.min.js',
+  'framework7/dist/js/framework7.min.js',
+  'font-awesome/css/font-awesome.min.css'
+];
+
+const config = {
   // http://webpack.github.io/docs/configuration.html#devtool
   devtool: 'source-map',
   entry: {
@@ -40,12 +48,7 @@ const FontAwesomeSCSSDir = path.resolve(nodeModulesDir, 'font-awesome/scss');
     ]
   },
   resolve: {
-    // Optimizing rebundling: http://christianalfoni.github.io/react-webpack-cookbook/Optimizing-rebundling.html
-    alias: {
-      'jquery': pathToJQuery,
-      'font-awesome.scss': pathToFontAwesome,
-      'framework7': pathToFramework7
-    },
+    alias: {},
 
     // Resolve the `./src` directory so we can avoid writing
     // ../../styles/base.css but styles/base.css
@@ -53,7 +56,7 @@ const FontAwesomeSCSSDir = path.resolve(nodeModulesDir, 'font-awesome/scss');
 
     // https://github.com/webpack/docs/wiki/configuration#resolveroot
     // See: http://stackoverflow.com/questions/27502608/resolving-require-paths-with-webpack
-    root: [FontAwesomeSCSSDir, NormalizeDir, framework7CSSDir, framework7JSDir],
+    root: [FontAwesomeSCSSDir, framework7CSSDir, framework7JSDir],
 
     extensions: ['', '.js', '.jsx', '.css', '.scss']
   },
@@ -62,8 +65,7 @@ const FontAwesomeSCSSDir = path.resolve(nodeModulesDir, 'font-awesome/scss');
     filename: 'bundle.js'
   },
   module: {
-    // Optimizing rebundling: http://christianalfoni.github.io/react-webpack-cookbook/Optimizing-rebundling.html
-    noParse: [pathToJQuery, pathToFontAwesome, pathToFramework7],
+    noParse: [],
 
     // http://webpack.github.io/docs/loaders.html
     // http://webpack.github.io/docs/list-of-loaders.html
@@ -109,3 +111,14 @@ const FontAwesomeSCSSDir = path.resolve(nodeModulesDir, 'font-awesome/scss');
     new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.bundle.js')
   ]
 };
+
+// Optimizing rebundling: http://christianalfoni.github.io/react-webpack-cookbook/Optimizing-rebundling.html
+// http://christianalfoni.github.io/react-webpack-cookbook/Optimizing-development.html
+deps.forEach(function (dep) {
+  const depPath = path.resolve(nodeModulesDir, dep);
+
+  config.resolve.alias[dep.split(path.sep)[0]] = depPath;
+  config.module.noParse.push(depPath);
+});
+
+module.exports = config;
