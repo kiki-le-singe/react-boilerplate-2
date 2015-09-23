@@ -19,23 +19,17 @@
 /* eslint-disable */
 
 // PACKAGES
-var webpack = require('webpack');
-var path = require('path');
+const webpack = require('webpack');
+const path = require('path');
 // https://github.com/webpack/extract-text-webpack-plugin
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 // PATHS/DIRECTORIES
-var nodeModulesDir = path.resolve(__dirname, 'node_modules');
-var framework7JSDir = path.resolve(nodeModulesDir, 'framework7/dist/js');
-var framework7CSSDir = path.resolve(nodeModulesDir, 'framework7/dist/css');
-var FontAwesomeSCSSDir = path.resolve(nodeModulesDir, 'font-awesome/scss');
-var NormalizeDir = path.resolve(nodeModulesDir, 'node.normalize.scss');
-var pathToReact = path.resolve(nodeModulesDir, 'react/dist/react.min.js');
-var pathToJQuery = path.resolve(nodeModulesDir, 'jquery/dist/jquery.min.js');
-var pathToFontAwesome = path.resolve(nodeModulesDir, 'font-awesome/css/font-awesome.min.css');
-var pathToFramework7 = path.resolve(nodeModulesDir, 'framework7/dist/js/framework7.min.js');
+const nodeModulesDir = path.resolve(__dirname, 'node_modules');
+const framework7JSDir = path.resolve(nodeModulesDir, 'framework7/dist/js');
+const framework7CSSDir = path.resolve(nodeModulesDir, 'framework7/dist/css');
+const FontAwesomeSCSSDir = path.resolve(nodeModulesDir, 'font-awesome/scss');
 
-module.exports = {
   // http://webpack.github.io/docs/configuration.html#devtool
   devtool: 'source-map',
   entry: {
