@@ -58,7 +58,8 @@ const config = {
     // See: http://stackoverflow.com/questions/27502608/resolving-require-paths-with-webpack
     root: [FontAwesomeSCSSDir, framework7CSSDir, framework7JSDir],
 
-    extensions: ['', '.js', '.jsx', '.css', '.scss']
+    extensions: ['', '.js', '.jsx']
+    // extensions: ['', '.js', '.jsx', '.css', '.scss']
   },
   output: {
     path: __dirname + '/build',
