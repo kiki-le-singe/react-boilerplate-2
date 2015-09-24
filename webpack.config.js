@@ -37,6 +37,16 @@ const deps = [
   'font-awesome/css/font-awesome.min.css'
 ];
 
+const vendorDependencies = [
+  'react',
+  'flux',
+  'react-router',
+  'lodash',
+  'framework7',
+  'classnames',
+  'jquery'
+];
+
 const config = {
   // http://webpack.github.io/docs/configuration.html#devtool
   devtool: 'source-map',
@@ -45,7 +55,10 @@ const config = {
       'webpack-dev-server/client?http://localhost:8080',
       'webpack/hot/dev-server',
       './src/index.jsx'
-    ]
+    ],
+
+    // http://christianalfoni.github.io/react-webpack-cookbook/Split-app-and-vendors.html
+    vendors: vendorDependencies
   },
   resolve: {
     alias: {},
