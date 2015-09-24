@@ -59,7 +59,6 @@ const config = {
     root: [FontAwesomeSCSSDir, framework7CSSDir, framework7JSDir],
 
     extensions: ['', '.js', '.jsx']
-    // extensions: ['', '.js', '.jsx', '.css', '.scss']
   },
   output: {
     path: __dirname + '/build',
