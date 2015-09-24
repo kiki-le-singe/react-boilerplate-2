@@ -107,7 +107,7 @@ const config = {
     // switch the server to hot mode
     new webpack.HotModuleReplacementPlugin(),
 
-    // see: http://christianalfoni.github.io/javascript/2014/12/13/did-you-know-webpack-and-react-is-awesome.html#chunks
+    // http://christianalfoni.github.io/react-webpack-cookbook/Split-app-and-vendors.html
     new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.bundle.js')
   ]
 };
