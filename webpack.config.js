@@ -23,8 +23,11 @@ const webpack = require('webpack');
 const path = require('path');
 // https://github.com/webpack/extract-text-webpack-plugin
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+// https://github.com/ampedandwired/html-webpack-plugin
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // PATHS/DIRECTORIES
+const assetsDir = path.resolve(__dirname, 'src/assets');
 const nodeModulesDir = path.resolve(__dirname, 'node_modules');
 const framework7JSDir = path.resolve(nodeModulesDir, 'framework7/dist/js');
 const framework7CSSDir = path.resolve(nodeModulesDir, 'framework7/dist/css');
@@ -113,7 +116,17 @@ const config = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('styles.css'),
+    new HtmlWebpackPlugin({
+      title: 'React Boilerplate 2',
+      hash: true,
+      inject: 'body',
+      template: path.resolve(assetsDir, 'build/index.html')
+    }),
+    new HtmlWebpackPlugin({ // Also generate a 404.html
+      filename: '404.html',
+      template: path.resolve(assetsDir, 'build/404.html')
+    }),
+    new ExtractTextPlugin('[name].[contenthash].css'),
 
     // https://github.com/webpack/docs/wiki/list-of-plugins#noerrorsplugin
     new webpack.NoErrorsPlugin(),
