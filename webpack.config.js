@@ -76,7 +76,7 @@ const config = {
   },
   output: {
     path: __dirname + '/build',
-    filename: 'bundle.js'
+    filename: '[name]-[hash].js'
   },
   module: {
     noParse: [],
@@ -122,7 +122,7 @@ const config = {
     new webpack.HotModuleReplacementPlugin(),
 
     // http://christianalfoni.github.io/react-webpack-cookbook/Split-app-and-vendors.html
-    new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.bundle.js')
+    new webpack.optimize.CommonsChunkPlugin('vendors', '[name].[hash].js')
   ]
 };
 
