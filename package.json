@@ -80,6 +80,7 @@
     "webpack-dev-server": "^1.10.1"
   },
   "scripts": {
+    "deploy": "NODE_ENV=production webpack -p --progress --config webpack.production.config.js",
     "start": "npm run build | node server/app.js",
     "build": "webpack"
   }
