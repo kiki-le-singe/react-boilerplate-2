@@ -44,7 +44,8 @@ const vendorDependencies = [
   'lodash',
   'framework7',
   'classnames',
-  'jquery'
+  'jquery',
+  'superagent'
 ];
 
 const config = {
