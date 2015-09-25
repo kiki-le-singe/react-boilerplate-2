@@ -4,4 +4,5 @@ temp
 dist
 .sass-cache
 build
+!src/assets/build
 reports
