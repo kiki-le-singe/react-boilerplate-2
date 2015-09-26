@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import AppRouter from './AppRouter';
 // The both Framework7 and Dom7 are exposed in window.*
-import Framework7 from 'framework7';
+import 'framework7';
 
 // *** STYLES *** //
 // Path to Framework7 MATERIAL CSS theme styles
