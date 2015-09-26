@@ -13,23 +13,23 @@ let searchValue = '';
 
 const create = (data) => {
   tools = data;
-  console.log('add item tool');
+  console.log('add item tool'); // eslint-disable-line
 };
 
 const fetchOne = (data) => {
   tool = data;
-  console.log(`fetch ${data.title} tool`);
+  console.log(`fetch ${data.title} tool`); // eslint-disable-line
 };
 
 const fetchAll = (data) => {
   tools = data;
-  console.log('fetch all tools');
+  console.log('fetch all tools'); // eslint-disable-line
 };
 
 const destroy = (id) => {
   // Framework7 handles itself the deletion of a DOM element.
   // So not need to handle it with the React setState() method.
-  console.log(`tool deleted: ${id}`);
+  console.log(`tool deleted: ${id}`); // eslint-disable-line
 };
 
 const search = (value) => {

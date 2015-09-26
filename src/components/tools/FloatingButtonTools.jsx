@@ -1,7 +1,5 @@
 import React from 'react';
 
-import FloatingButton from 'components/FloatingButton';
-
 // Docs:
 // - http://www.idangero.us/framework7/docs/floating-action-button.html
 

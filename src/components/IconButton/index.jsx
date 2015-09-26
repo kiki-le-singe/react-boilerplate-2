@@ -5,12 +5,12 @@ const propTypes = {
   className: PropTypes.string,
   iconClassName: PropTypes.string.isRequired,
   classIcon: PropTypes.string,
-  prefixClassIcon: PropTypes.string
+  prefixClassIcon: PropTypes.string,
 };
 
 const defaultProps = {
   classIcon: 'icon',
-  prefixClassIcon: 'icon-'
+  prefixClassIcon: 'icon-',
 };
 
 class IconButton extends Component {
@@ -28,8 +28,6 @@ class IconButton extends Component {
   }
 
   render() {
-    const { className } = this.props;
-
     return (
       <a href="#" className={this.getClassName()}>
         <i className={this.getIconClassName()}></i>

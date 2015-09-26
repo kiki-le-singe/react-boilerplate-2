@@ -11,12 +11,12 @@ import Page from 'components/pages/Page';
  */
 const getToolState = () => {
   return {
-    tool: ToolStore.getOne()
+    tool: ToolStore.getOne(),
   };
 };
 
 const defaultProps = {
-  isPageCached: true
+  isPageCached: true,
 };
 
 class Tool extends Page {

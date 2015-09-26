@@ -6,12 +6,12 @@ import FloatingButton from 'components/FloatingButton';
 
 const propTypes = {
   isFloatingButtonEnabled: PropTypes.bool,
-  isPageCached: PropTypes.bool
+  isPageCached: PropTypes.bool,
 };
 
 const defaultProps = {
   isFloatingButtonEnabled: false,
-  isPageCached: false
+  isPageCached: false,
 };
 
 class Page extends Component {

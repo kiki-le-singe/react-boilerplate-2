@@ -10,7 +10,7 @@ export default {
     return Tool.create(tool).then((data) => {
       AppDispatcher.dispatch({
         actionType: ToolConstants.TOOL_CREATE,
-        data: data
+        data: data,
       });
     });
   },
@@ -19,7 +19,7 @@ export default {
     return Tool.fetchOne(id).then((data) => {
       AppDispatcher.dispatch({
         actionType: ToolConstants.TOOL_FETCH,
-        data: data
+        data: data,
       });
     });
   },
@@ -28,17 +28,17 @@ export default {
     return Tool.fetch().then((data) => {
       AppDispatcher.dispatch({
         actionType: ToolConstants.TOOLS_FETCH,
-        data: data
+        data: data,
       });
     });
   },
 
   delete(id) {
     return Tool.delete(id)
-      .then((data) => {
+      .then((data) => {  // eslint-disable-line
         AppDispatcher.dispatch({
           actionType: ToolConstants.TOOL_DELETE,
-          id: id
+          id: id,
         });
       });
   },
@@ -46,7 +46,7 @@ export default {
   search(value) {
     AppDispatcher.dispatch({
       actionType: ToolConstants.TOOL_SEARCH,
-      value: value
+      value: value,
     });
-  }
+  },
 };

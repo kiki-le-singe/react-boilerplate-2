@@ -18,7 +18,7 @@ import SearchTools from 'components/tools/SearchTools';
 const getToolState = () => {
   return {
     tools: ToolStore.getAll(),
-    searchValue: ToolStore.searchValue()
+    searchValue: ToolStore.searchValue(),
   };
 };
 

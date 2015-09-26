@@ -47,7 +47,7 @@ class PopupCreateTool extends Component {
       title: title,
       text: text,
       route: route,
-      slug: _.kebabCase(title)
+      slug: _.kebabCase(title),
     }).then(() => {
       titleEL.value = '';
       textEl.value = '';

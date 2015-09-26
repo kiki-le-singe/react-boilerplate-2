@@ -4,7 +4,7 @@ import React, { PropTypes, Component } from 'react';
 // - http://www.idangero.us/framework7/docs/floating-action-button.html
 
 const propTypes = {
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
 };
 
 class FloatingButton extends Component {

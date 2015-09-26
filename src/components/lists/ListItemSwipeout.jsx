@@ -5,15 +5,14 @@ import classnames from 'classnames';
 // - http://www.idangero.us/framework7/docs/swipeout.html#overswipe
 
 const propTypes = {
-  route: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
-  prefixClassIcon: PropTypes.string
+  prefixClassIcon: PropTypes.string,
 };
 
 const defaultProps = {
-  prefixClassIcon: 'icon-'
+  prefixClassIcon: 'icon-',
 };
 
 class ListItemSwipeout extends Component {
@@ -29,11 +28,11 @@ class ListItemSwipeout extends Component {
   componentDidMount() {
     this.swipeoutEl = findDOMNode(this.refs.swipeout);
 
-    Dom7(this.swipeoutEl).on('deleted', this.showAlert);
+    Dom7(this.swipeoutEl).on('deleted', this.showAlert); // eslint-disable-line
   }
 
   componentWillUnmount() {
-    Dom7(this.swipeoutEl).off('deleted', this.showAlert);
+    Dom7(this.swipeoutEl).off('deleted', this.showAlert); // eslint-disable-line
   }
 
   handleClick() {}
@@ -43,7 +42,7 @@ class ListItemSwipeout extends Component {
   }
 
   render() {
-    const { route, title, text, prefixClassIcon, slug } = this.props;
+    const { title, text, prefixClassIcon, slug } = this.props;
     const iconClassName = classnames('icon', [prefixClassIcon, slug].join(''));
 
     return (

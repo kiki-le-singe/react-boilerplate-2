@@ -6,7 +6,7 @@ import ToolPage from 'components/pages/Tools/Tool';
 import PopupCreateTool from 'components/popup/tools/PopupCreateTool';
 
 const propTypes = {
-  children: PropTypes.object
+  children: PropTypes.object,
 };
 
 class App extends Component {

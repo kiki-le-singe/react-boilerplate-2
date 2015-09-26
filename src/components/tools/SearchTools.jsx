@@ -1,4 +1,4 @@
-import React, { Component, PropTypes, findDOMNode } from 'react';
+import React, { Component } from 'react';
 
 import ToolActions from 'actions/ToolActions';
 

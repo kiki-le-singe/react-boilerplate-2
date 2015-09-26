@@ -11,8 +11,7 @@ class Tool {
            .end((err, res) => {
              if (res.ok) {
                resolve(res.body);
-             }
-             else {
+             } else {
                console.error(api.tools, res.text); // eslint-disable-line
                reject(res.text);
              }
@@ -27,8 +26,7 @@ class Tool {
            .end((err, res) => {
              if (res.ok) {
                resolve(res.body);
-             }
-             else {
+             } else {
                console.error(api.tools, res.text); // eslint-disable-line
                reject(res.text);
              }
@@ -45,8 +43,7 @@ class Tool {
            .end((err, res) => {
              if (res.ok) {
                resolve(res.body);
-             }
-             else {
+             } else {
                console.error(api.tools, res.text); // eslint-disable-line
                reject(res.text);
              }
@@ -61,8 +58,7 @@ class Tool {
            .end((err, res) => {
              if (res.ok) {
                resolve(res.body);
-             }
-             else {
+             } else {
                console.error(api.tools, res.text); // eslint-disable-line
                reject(res.text);
              }

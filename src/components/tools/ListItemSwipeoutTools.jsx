@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; // eslint-disable-line
 
 import ToolActions from 'actions/ToolActions';
 
@@ -15,7 +15,7 @@ class ListItemSwipeoutTools extends ListItemSwipeout {
   handleClick = () => {
     // Init main view
     const mainView = f7App.addView('.view-main', {
-      domCache: true //enable inline pages
+      domCache: true, // enable inline pages
     });
 
     // Show loader

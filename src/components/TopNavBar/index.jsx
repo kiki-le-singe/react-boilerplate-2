@@ -7,13 +7,13 @@ const propTypes = {
   title: PropTypes.string,
   isBackPage: PropTypes.bool,
   iconElementRight: PropTypes.element,
-  isLeftIcon: PropTypes.bool
+  isLeftIcon: PropTypes.bool,
 };
 
 const defaultProps = {
   title: 'React Boilerplate 2',
   isBackPage: false,
-  isLeftIcon: true
+  isLeftIcon: true,
 };
 
 class TopNavBar extends React.Component {
@@ -32,8 +32,7 @@ class TopNavBar extends React.Component {
           <i className="icon icon-back"></i>
         </a>
       );
-    }
-    else {
+    } else {
       icon = (
         <a href="#" className="open-panel link icon-only ajax">
           <i className="icon icon-bars"></i>

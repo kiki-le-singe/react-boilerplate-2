@@ -5,12 +5,12 @@ import ListItemSwipeoutTools from './ListItemSwipeoutTools';
 
 const propTypes = {
   data: PropTypes.array,
-  searchValue: PropTypes.string
+  searchValue: PropTypes.string,
 };
 
 const defaultProps = {
   data: [],
-  searchValue: ''
+  searchValue: '',
 };
 
 class ListSwipeoutTools extends ListSwipeout {
@@ -29,7 +29,6 @@ class ListSwipeoutTools extends ListSwipeout {
       return (
         <ListItemSwipeoutTools
           id={item.id}
-          route={item.route}
           title={item.title}
           text={item.text}
           slug={item.slug}

@@ -23,7 +23,7 @@ class ListItem extends Component {
 
 ListItem.propTypes = {
   route: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
 };
 
 export default ListItem;

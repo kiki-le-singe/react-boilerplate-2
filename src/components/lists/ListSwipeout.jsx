@@ -13,7 +13,6 @@ class ListSwipeout extends Component {
     return data.map((item, index) => {
       return (
         <ListItemSwipeout
-          route={item.route}
           title={item.title}
           text={item.text}
           slug={item.slug}
@@ -35,7 +34,7 @@ class ListSwipeout extends Component {
 }
 
 ListSwipeout.propTypes = {
-  data: PropTypes.array.isRequired
+  data: PropTypes.array.isRequired,
 };
 
 export default ListSwipeout;

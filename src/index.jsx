@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import AppRouter from './AppRouter';
 // The both Framework7 and Dom7 are exposed in window.*
-import 'framework7';
+import Framework7 from 'framework7';
 
 // *** STYLES *** //
 // Path to Framework7 MATERIAL CSS theme styles
@@ -18,7 +18,7 @@ $(() => {
   window.f7App = new Framework7({
     swipePanel: 'left', // http://www.idangero.us/framework7/docs/side-panels.html#open-panels-with-swipe
     ajaxLinks: 'a.ajax',
-    material: true
+    material: true,
   });
 
   React.render(AppRouter, document.getElementById('app'));

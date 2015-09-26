@@ -8,7 +8,7 @@ class Nav extends React.Component {
       { route: '/', text: 'Home' },
       { route: '/hello', text: 'Hello' },
       { route: '/about', text: 'About' },
-      { route: '/tools', text: 'Tools' }
+      { route: '/tools', text: 'Tools' },
     ];
 
     return (

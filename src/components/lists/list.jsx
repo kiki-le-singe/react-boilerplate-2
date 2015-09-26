@@ -29,7 +29,7 @@ class List extends Component {
 }
 
 List.propTypes = {
-  menuItems: PropTypes.array.isRequired
+  menuItems: PropTypes.array.isRequired,
 };
 
 export default List;
